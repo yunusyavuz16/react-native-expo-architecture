@@ -7,24 +7,21 @@ import {
 } from "@react-navigation/native";
 import React from "react";
 import { useColorScheme } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Provider } from "react-redux";
-import LoadingProvider from "./loading";
 import { indexStyles } from "./index.styles";
+import LoadingProvider from "./loading";
 
 const AppProviders: React.FC<React.PropsWithChildren> = ({ children }) => {
   const colorScheme = useColorScheme();
+  const Scheme = colorScheme === "dark" ? DarkTheme : DefaultTheme;
 
   return (
     <Provider store={store}>
       <SafeAreaView style={indexStyles.container}>
-        <ThemeProvider
-          value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-        >
+        <ThemeProvider value={Scheme}>
           <ErrorBoundary>
-            <LoadingProvider>
-              <SafeAreaProvider>{children}</SafeAreaProvider>
-            </LoadingProvider>
+            <LoadingProvider>{children}</LoadingProvider>
           </ErrorBoundary>
         </ThemeProvider>
       </SafeAreaView>
