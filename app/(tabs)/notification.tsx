@@ -1,30 +1,11 @@
-import { StyleSheet, Text } from "react-native";
+import { Text } from "react-native";
 
-import { ThemedView } from "@/components/ThemedView";
+import ScreenLayout from "@/components/screenLayout";
 
 export default function TabTwoScreen() {
   return (
-    <ThemedView style={styles.flexContainer}>
+    <ScreenLayout>
       <Text>Merhaba</Text>
-    </ThemedView>
+    </ScreenLayout>
   );
 }
-
-const styles = StyleSheet.create({
-  flexContainer: {
-    flex: 1,
-    justifyContent: "center",
-    padding: 20,
-    alignItems: "center",
-  },
-  headerImage: {
-    color: "#808080",
-    bottom: -90,
-    left: -35,
-    position: "absolute",
-  },
-  titleContainer: {
-    flexDirection: "row",
-    gap: 8,
-  },
-});

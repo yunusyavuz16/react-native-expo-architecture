@@ -2,7 +2,7 @@ import { useAppSelector } from "@/hooks/useAppSelector";
 import { usePosts } from "@/hooks/usePosts";
 import { FlashList } from "@shopify/flash-list";
 import React from "react";
-import { View } from "react-native";
+import { ThemedView } from "../ThemedView";
 import Post from "./Post";
 import { postContainerStyles } from "./postContainer.styles";
 
@@ -11,7 +11,7 @@ const PostContainer = () => {
   const authUser = useAppSelector((state) => state.auth.user);
   const newTimeStamp = new Date().toISOString();
   return (
-    <View style={postContainerStyles.container}>
+    <ThemedView style={postContainerStyles.container}>
       <FlashList
         data={posts}
         keyExtractor={(post) => post.id.toString()}
@@ -25,7 +25,7 @@ const PostContainer = () => {
         )}
         estimatedItemSize={100} // Adjust this based on the average item height
       />
-    </View>
+    </ThemedView>
   );
 };
 
