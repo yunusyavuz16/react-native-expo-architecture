@@ -3,11 +3,12 @@
 import { StyleSheet, Text } from "react-native";
 
 import { ThemedView } from "@/components/ThemedView";
+import PostContainer from "@/components/post/PostContainer";
 
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.flexContainer}>
-      <Text>Merhaba</Text>
+      <PostContainer />
     </ThemedView>
   );
 }
