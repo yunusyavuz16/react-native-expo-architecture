@@ -1,10 +1,8 @@
-//app/(tabs)/index.tsx
-
 import { StyleSheet, Text } from "react-native";
 
 import { ThemedView } from "@/components/ThemedView";
 
-export default function HomeScreen() {
+export default function TabTwoScreen() {
   return (
     <ThemedView style={styles.flexContainer}>
       <Text>Merhaba</Text>
@@ -19,20 +17,14 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: "center",
   },
+  headerImage: {
+    color: "#808080",
+    bottom: -90,
+    left: -35,
+    position: "absolute",
+  },
   titleContainer: {
     flexDirection: "row",
-    alignItems: "center",
     gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
   },
 });
