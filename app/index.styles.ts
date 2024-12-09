@@ -14,6 +14,22 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: ConstantColors.white,
   },
+  titleContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.small,
+  },
+  stepContainer: {
+    gap: Spacing.small,
+    marginBottom: Spacing.small,
+  },
+  reactLogo: {
+    height: 178,
+    width: 290,
+    bottom: 0,
+    left: 0,
+    position: "absolute",
+  },
 });
 
 export default styles;
