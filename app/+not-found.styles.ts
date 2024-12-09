@@ -1,7 +1,7 @@
 import { Spacing } from "@/constants/Spacing";
 import { StyleSheet } from "react-native";
 
-export const notFoundStyles = StyleSheet.create({
+const notFoundStyles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
@@ -13,3 +13,5 @@ export const notFoundStyles = StyleSheet.create({
     paddingVertical: Spacing.medium,
   },
 });
+
+export default notFoundStyles;

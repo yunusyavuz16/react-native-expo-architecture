@@ -1,8 +1,7 @@
 import { Spacing } from "@/constants/Spacing";
 import { StyleSheet } from "react-native";
 
-export const indexStyles = StyleSheet.create({
-
+const indexStyles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -20,3 +19,5 @@ export const indexStyles = StyleSheet.create({
     position: "absolute",
   },
 });
+
+export default indexStyles;

@@ -2,10 +2,10 @@ import { Text } from "react-native";
 
 import ScreenLayout from "@/components/screenLayout";
 
-export default function TabTwoScreen() {
+export default function Notification() {
   return (
     <ScreenLayout>
-      <Text>Merhaba</Text>
+      <Text>Notification</Text>
     </ScreenLayout>
   );
 }

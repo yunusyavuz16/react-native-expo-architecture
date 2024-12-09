@@ -2,7 +2,7 @@ import { ThemedView } from "@/components/ThemedView";
 import useLogin from "@/hooks/useLogin";
 import { useState } from "react";
 import { Button, TextInput } from "react-native";
-import { loginStyles } from "./login.styles";
+import loginStyles from "./login.styles";
 
 export default function LoginScreen() {
   const [username, setUsername] = useState("admin");

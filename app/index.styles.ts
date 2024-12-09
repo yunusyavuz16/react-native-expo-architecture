@@ -2,7 +2,7 @@ import { ConstantColors } from "@/constants/Colors";
 import { Spacing } from "@/constants/Spacing";
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: ConstantColors.primary,
@@ -15,3 +15,5 @@ export const styles = StyleSheet.create({
     color: ConstantColors.white,
   },
 });
+
+export default styles;

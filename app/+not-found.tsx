@@ -2,7 +2,7 @@ import { Link, Stack } from "expo-router";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { notFoundStyles } from "./+not-found.styles";
+import notFoundStyles from "./+not-found.styles";
 
 export default function NotFoundScreen() {
   return (
@@ -17,5 +17,3 @@ export default function NotFoundScreen() {
     </>
   );
 }
-
-
