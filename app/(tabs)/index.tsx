@@ -3,6 +3,8 @@
 import PostContainer from "@/components/post/PostContainer";
 import PostHeaderComponent from "@/components/post-header";
 import ScreenLayout from "@/components/screen-layout";
+import { View } from "react-native";
+import { flexStyle } from "@/constants/Styles";
 
 export default function HomeScreen() {
   const onNotificationPress = () => {
@@ -13,7 +15,7 @@ export default function HomeScreen() {
   };
 
   return (
-    <>
+    <View style={flexStyle.flex1}>
       <PostHeaderComponent
         onNotificationPress={onNotificationPress}
         onSearchPress={onSearchPress}
@@ -23,6 +25,6 @@ export default function HomeScreen() {
       <ScreenLayout>
         <PostContainer />
       </ScreenLayout>
-    </>
+    </View>
   );
 }

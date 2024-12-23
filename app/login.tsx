@@ -15,8 +15,6 @@ import {
   widthStyle,
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
-import useAuth from "@/hooks/useAuth";
-import { useState } from "react";
 import { View } from "react-native";
 
 export default function LoginScreen() {
