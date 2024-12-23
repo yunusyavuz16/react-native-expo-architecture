@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import ScreenLayout from "@/components/screenLayout";
+import React from "react";
+import { Text } from "react-native";
 
 const Setting = () => {
   return (
-    <View>
+    <ScreenLayout>
       <Text>setting</Text>
-    </View>
-  )
-}
+    </ScreenLayout>
+  );
+};
 
-export default Setting
+export default Setting;

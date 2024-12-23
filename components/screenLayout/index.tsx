@@ -1,9 +1,17 @@
-import React, { PropsWithChildren } from "react";
+import React, { memo, PropsWithChildren } from "react";
 import { ThemedView } from "../ThemedView";
 import { styles } from "./index.styles";
+import useStyles from "@/hooks/theme/useStyles";
 
 const ScreenLayout: React.FC<PropsWithChildren> = ({ children }) => {
-  return <ThemedView style={styles.flexContainer}>{children}</ThemedView>;
+  const backgroundStyle = useStyles().screenBackground;
+  return (
+    <ThemedView
+      style={[styles.flexContainer, backgroundStyle.containerBacgkround]}
+    >
+      {children}
+    </ThemedView>
+  );
 };
 
-export default ScreenLayout;
+export default memo(ScreenLayout);
