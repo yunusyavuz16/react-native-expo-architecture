@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     padding: Spacing.large,
-    margin: Spacing.large,
     borderRadius: 15,
   },
   text: {

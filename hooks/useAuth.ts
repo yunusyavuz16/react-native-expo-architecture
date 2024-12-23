@@ -1,9 +1,9 @@
 import { loginApi } from "@/api/login";
-import { login } from "@/store/slices/authSlice";
+import { login, logout } from "@/store/slices/authSlice";
 import { useRouter } from "expo-router";
 import { useDispatch } from "react-redux";
 
-const useLogin = (username: string) => {
+const useAuth = (username: string) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -13,7 +13,12 @@ const useLogin = (username: string) => {
     router.push("/(tabs)");
   };
 
-  return { handleLogin };
+  const handleLogout = () => {
+    dispatch(logout());
+    router.push("/login");
+  };
+
+  return { handleLogin, handleLogout };
 };
 
-export default useLogin;
+export default useAuth;

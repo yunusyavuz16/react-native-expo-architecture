@@ -6,17 +6,20 @@ import { Provider } from "react-redux";
 import { indexStyles } from "./index.styles";
 import LoadingProvider from "./loading";
 import { ThemeProvider } from "./theme/ThemeContext";
+import { ThemedView } from "@/components/ThemedView";
 
 const AppProviders: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <Provider store={store}>
-      <SafeAreaView style={indexStyles.container}>
-        <ThemeProvider>
-          <ErrorBoundary>
-            <LoadingProvider>{children}</LoadingProvider>
-          </ErrorBoundary>
-        </ThemeProvider>
-      </SafeAreaView>
+      <ThemeProvider>
+        <ThemedView style={indexStyles.container}>
+          <SafeAreaView style={indexStyles.container}>
+            <ErrorBoundary>
+              <LoadingProvider>{children}</LoadingProvider>
+            </ErrorBoundary>
+          </SafeAreaView>
+        </ThemedView>
+      </ThemeProvider>
     </Provider>
   );
 };

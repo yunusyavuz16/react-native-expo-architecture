@@ -1,14 +1,25 @@
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import {
+  flexStyle,
+  justifyContentStyle,
+  paddingStyle,
+  textAlignStyle,
+} from "@/constants/Styles";
 import { useRouteNavigation } from "@/hooks/useRouteNavigation";
 import React from "react";
-import styles from "./index.styles";
 
 const index = () => {
   useRouteNavigation();
   return (
-    <ThemedView style={styles.container}>
-      <ThemedText style={styles.textButton}>
+    <ThemedView
+      style={[
+        flexStyle.flex1,
+        justifyContentStyle.justifyContentCenter,
+        paddingStyle.paddingLg,
+      ]}
+    >
+      <ThemedText style={textAlignStyle.textAlignCenter}>
         React Native Expo Architecture
       </ThemedText>
     </ThemedView>
@@ -16,4 +27,3 @@ const index = () => {
 };
 
 export default index;
-

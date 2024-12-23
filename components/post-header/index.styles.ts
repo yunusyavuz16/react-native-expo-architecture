@@ -8,7 +8,6 @@ const headerStyles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: Spacing.large,
-    backgroundColor: "#fff",
     borderBottomWidth: 1,
     borderBottomColor: "#eee",
     shadowColor: "#000",
@@ -19,7 +18,6 @@ const headerStyles = StyleSheet.create({
   title: {
     fontSize: Typography.fontSizeLarge,
     fontWeight: "bold",
-    color: "#333",
   },
   iconContainer: {
     flexDirection: "row",
