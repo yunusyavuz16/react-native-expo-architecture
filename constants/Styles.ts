@@ -206,6 +206,9 @@ export const textFontSizeStyle = StyleSheet.create({
   textFontSizeSm: {
     fontSize: Typography.fontSizeSmall,
   },
+  textFontSizeXmd: {
+    fontSize: Typography.fontSizeSmallMedium,
+  },
   textFontSizeMd: {
     fontSize: Typography.fontSizeMedium,
   },
@@ -214,6 +217,18 @@ export const textFontSizeStyle = StyleSheet.create({
   },
   textFontSizeXl: {
     fontSize: Typography.fontSizeExtraLarge,
+  },
+});
+
+export const textFontWeightStyle = StyleSheet.create({
+  textFontWeightBold: {
+    fontWeight: "bold",
+  },
+  textFontWeightNormal: {
+    fontWeight: "normal",
+  },
+  textFontWeightLight: {
+    fontWeight: "light",
   },
 });
 

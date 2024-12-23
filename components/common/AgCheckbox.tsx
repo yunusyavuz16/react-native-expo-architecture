@@ -1,3 +1,4 @@
+import { borderRadiusStyle } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
@@ -9,14 +10,18 @@ const AgCheckBox = ({
   value: boolean;
   onValueChange: () => void;
 }) => {
-  const { agBgPrimaryColor, agPrimaryBorderSmRounded } = useStyles();
+  const { agBgPrimaryColor,agLightActive, agPrimaryBorderColor, ag600BorderColor } =
+    useStyles();
   return (
     <TouchableOpacity
       onPress={onValueChange}
       style={[
         styles.checkbox,
+        agLightActive,
+        ag600BorderColor,
         value && agBgPrimaryColor,
-        value && agPrimaryBorderSmRounded,
+        value && agPrimaryBorderColor,
+        borderRadiusStyle.borderRadiusSm,
       ]}
     >
       {value && <Ionicons name="checkmark" size={18} color="white" />}

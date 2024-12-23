@@ -5,6 +5,7 @@ import {
   marginBottomStyle,
   marginLeftStyle,
   positionStyle,
+  textFontSizeStyle,
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -13,13 +14,17 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { ThemedText } from "../ThemedText";
 import AgCheckBox from "../common/AgCheckbox";
 import AgInput from "../common/AgInput";
+import AgButton from "../common/AgButton";
+import useAuth from "@/hooks/useAuth";
 
+const initialEmail = "admin@email.com";
 const LoginForm = () => {
   const { agPrimaryColor } = useStyles();
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialEmail);
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const { handleLogin } = useAuth(initialEmail);
 
   const handlePressCheckBox = () => {
     setRememberMe(!rememberMe);
@@ -50,10 +55,8 @@ const LoginForm = () => {
           alignItemsStyle.alignItemsEnd,
         ]}
       >
-        <ThemedText style={marginBottomStyle.marginBottomSm}>
-          Password
-        </ThemedText>
-        <TouchableOpacity style={[marginBottomStyle.marginBottomSm]}>
+        <ThemedText>Password</ThemedText>
+        <TouchableOpacity>
           <Text style={[agPrimaryColor]}>Forgot Password?</Text>
         </TouchableOpacity>
       </View>
@@ -92,15 +95,19 @@ const LoginForm = () => {
         ]}
       >
         <AgCheckBox value={rememberMe} onValueChange={handlePressCheckBox} />
-        <ThemedText type="sm" style={[marginLeftStyle.marginLeftMd]}>
+        <ThemedText
+          type="sm"
+          style={[
+            marginLeftStyle.marginLeftMd,
+            textFontSizeStyle.textFontSizeXmd,
+          ]}
+        >
           Remember me
         </ThemedText>
       </View>
 
       {/* Sign In Button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Sign In</Text>
-      </TouchableOpacity>
+      <AgButton onPress={handleLogin} text="Sign In" type="primary" />
     </View>
   );
 };
@@ -110,18 +117,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 12,
     top: 12,
-  },
-
-  button: {
-    backgroundColor: "#4A90E2",
-    padding: 15,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "600",
   },
 });
 

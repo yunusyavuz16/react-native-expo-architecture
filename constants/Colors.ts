@@ -15,6 +15,7 @@ export const Colors = {
   light: {
     screenBackground: AG_BG_PRIMARY_LIGHT,
     text: "#11181C",
+    textLight: AG_WHITE,
     background: AG_WHITE,
     tint: AG_PRIMARY,
     icon: "#687076",
@@ -36,6 +37,7 @@ export const Colors = {
   dark: {
     screenBackground: AG_BG_PRIMARY_DARK,
     text: "#ECEDEE",
+    textLight: "#ECEDEE", //this.text,
     background: "#1F212A",
     tint: AG_WHITE,
     agPrimary: AG_PRIMARY_DARK,

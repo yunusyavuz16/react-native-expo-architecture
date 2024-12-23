@@ -21,6 +21,7 @@ const useStyles = () => {
     agGray300,
     agGray700,
     agLightActive,
+    textLight
   } = useAllColors();
 
   return {
@@ -28,6 +29,8 @@ const useStyles = () => {
     agLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
     agBgPrimaryColor: screenBackgroundStyle(agPrimary).containerBacgkround,
     borderColor: borderStyle(agGray300).border,
+
+    ag600BorderColor: borderStyle(agGray600).border,
     agPrimaryBorderColor: borderStyle(agPrimary).border,
     agPrimaryBorderSmRounded: borderStyle(agPrimary).borderSmRounded,
     agGray100Color: agTextColorStyle(agGray100).textColor,
@@ -40,6 +43,7 @@ const useStyles = () => {
     agGray800Color: agTextColorStyle(agGray800).textColor,
     agGray900Color: agTextColorStyle(agGray900).textColor,
     agPrimaryColor: agTextColorStyle(agPrimary).textColor,
+    agTextLightStyle: agTextColorStyle(textLight).textColor,
   };
 };
 export default useStyles;
