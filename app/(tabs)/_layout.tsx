@@ -2,16 +2,16 @@
 
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { useColor } from "@/hooks/theme/useColors";
 import { Ionicons } from "@expo/vector-icons";
+import { Platform } from "react-native";
 
 export default function TabLayout() {
-  const colorTint = useColor().tint
+  const colorTint = useColor().tint;
 
   return (
     <Tabs
@@ -22,10 +22,17 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: "absolute",
+            height: 60,
           },
-          default: {},
+          default: {
+            backgroundColor: "transparent",
+            borderTopWidth: 0,
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            elevation: 0,
+          },
         }),
       }}
     >
@@ -53,6 +60,15 @@ export default function TabLayout() {
           title: "Profile",
           tabBarIcon: ({ color }) => (
             <Ionicons size={28} name="person" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="setting"
+        options={{
+          title: "Setting",
+          tabBarIcon: ({ color }) => (
+            <Ionicons size={28} name="settings" color={color} />
           ),
         }}
       />
