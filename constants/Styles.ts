@@ -18,10 +18,10 @@ export const borderStyle = (borderColor: string) =>
     },
   });
 
-export const agGray700Style = (agGray700: string) =>
+export const agTextColorStyle = (agGray: string) =>
   StyleSheet.create({
-    agGray700Color: {
-      color: agGray700,
+    textColor: {
+      color: agGray,
     },
   });
 

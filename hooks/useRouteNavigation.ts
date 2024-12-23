@@ -9,7 +9,7 @@ export const useRouteNavigation = () => {
   const fetchData = async () => {
     const token = await getValue();
     await delay(1000);
-    if (token) {
+    if (token && token.accessToken) {
       goHome();
     } else {
       goLogin();
