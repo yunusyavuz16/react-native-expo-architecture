@@ -1,10 +1,10 @@
 // useStyles
 
 import { screenBackgroundStyle } from "@/constants/Styles";
-import { useColor } from "./useColors";
+import { useAllColors } from "./useAllColors";
 
 const useStyles = () => {
-  const screenBackground = useColor().screenBackground;
+  const screenBackground = useAllColors().screenBackground;
 
   return {
     screenBackground: screenBackgroundStyle(screenBackground),
