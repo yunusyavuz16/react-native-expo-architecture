@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { Appearance } from "react-native";
 import * as SecureStore from "expo-secure-store";
+import { SECURE_STORE_KEYS } from "@/constants/Keys";
 
 export type Theme = "light" | "dark";
 
@@ -18,7 +19,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const loadTheme = async () => {
-      const savedTheme = await SecureStore.getItemAsync("theme");
+      const savedTheme = await SecureStore.getItemAsync(SECURE_STORE_KEYS.THEME);
       if (savedTheme) {
         setTheme(savedTheme as Theme);
       }
@@ -29,7 +30,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const toggleTheme = async () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    await SecureStore.setItemAsync("theme", newTheme);
+    await SecureStore.setItemAsync(SECURE_STORE_KEYS.THEME, newTheme);
   };
 
   return (

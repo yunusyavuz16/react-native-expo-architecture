@@ -7,9 +7,11 @@ export const useRouteNavigation = () => {
   const router = useRouter();
 
   const fetchData = async () => {
-    const token = await getValue();
+
+    const userData = await getValue();
+    // you can fetch your data from your api using your refresh token here
     await delay(1000);
-    if (token && token.accessToken) {
+    if (userData && userData.accessToken) {
       goHome();
     } else {
       goLogin();

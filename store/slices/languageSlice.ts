@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { changeLanguage as i18nChangeLanguage } from '@/localization/i18n';
+import { changeLanguage as i18nChangeLanguage } from '@/localization';
 import { AppDispatch } from '..';
 
 const initialState = {

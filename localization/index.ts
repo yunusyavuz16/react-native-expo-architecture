@@ -1,25 +1,31 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import * as Localization from "react-native-localize";
+import * as Localization from "expo-localization";
+import en from "./en.json";
+import tr from "./tr.json";
+
 
 const resources = {
   en: {
-    translation: {
-      welcome: "Welcome",
-      languageSwitch: "Switch Language",
-    },
+    translation: en,
   },
   tr: {
-    translation: {
-      welcome: "Hoşgeldiniz",
-      languageSwitch: "Dili Değiştir",
-    },
+    translation: tr,
   },
 };
 
+const supportedLanguages = ["en", "tr"];
+const defaultLang = "tr";
+
+const detectedLanguage = Localization.locale.split('-')[0];
+
+const lng = supportedLanguages.includes(detectedLanguage)
+  ? detectedLanguage
+  : defaultLang;
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: Localization.getLocales()[0].languageCode.slice(0, 2), // Default language
+  lng: lng, // Default language
   fallbackLng: "tr", // Fallback language
   interpolation: {
     escapeValue: false, // React already handles escaping
