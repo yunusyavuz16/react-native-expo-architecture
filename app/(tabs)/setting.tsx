@@ -1,11 +1,11 @@
-import ScreenLayout from "@/components/screenLayout";
+import DarkModeToggle from "@/components/dark-mode-row";
+import ScreenLayout from "@/components/screen-layout";
 import React from "react";
-import { Text } from "react-native";
 
 const Setting = () => {
   return (
     <ScreenLayout>
-      <Text>setting</Text>
+      <DarkModeToggle />
     </ScreenLayout>
   );
 };

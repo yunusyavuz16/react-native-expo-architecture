@@ -1,6 +1,6 @@
 import { Text } from "react-native";
 
-import ScreenLayout from "@/components/screenLayout";
+import ScreenLayout from "@/components/screen-layout";
 
 export default function Notification() {
   return (

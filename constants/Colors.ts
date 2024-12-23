@@ -7,6 +7,7 @@ const AG_WHITE = "#fff";
 
 // primary
 const AG_PRIMARY = "#1B84FF";
+const AG_PRIMARY_DARK = "#006AE6"
 const AG_BG_PRIMARY_LIGHT = "#EDF0F8";
 const AG_BG_PRIMARY_DARK = "#1a1b24";
 
@@ -19,6 +20,7 @@ export const Colors = {
     icon: "#687076",
     tabIconDefault: "#687076",
     tabIconSelected: AG_PRIMARY,
+    agPrimary: AG_PRIMARY,
     agGray100: "#F9F9F9",
     agGray200: "#F1F1F4",
     agGray300: "#DBDFE9",
@@ -34,9 +36,10 @@ export const Colors = {
     text: "#ECEDEE",
     background: "#12131A",
     tint: AG_WHITE,
+    agPrimary: AG_PRIMARY_DARK,
     icon: "#9BA1A6",
     tabIconDefault: "#9BA1A6",
-    tabIconSelected: AG_PRIMARY,
+    tabIconSelected: AG_PRIMARY_DARK,
     agGray100: "#1B1C22",
     agGray200: "#26272F",
     agGray300: "#363843",

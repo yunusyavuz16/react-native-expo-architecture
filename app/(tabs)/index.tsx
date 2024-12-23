@@ -1,8 +1,8 @@
 //app/(tabs)/index.tsx
 
 import PostContainer from "@/components/post/PostContainer";
-import PostHeaderComponent from "@/components/PostHeader";
-import ScreenLayout from "@/components/screenLayout";
+import PostHeaderComponent from "@/components/post-header";
+import ScreenLayout from "@/components/screen-layout";
 
 export default function HomeScreen() {
   const onNotificationPress = () => {
