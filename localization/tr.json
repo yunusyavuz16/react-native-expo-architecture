@@ -1,5 +1,6 @@
 {
   "welcome": "Hoşgeldiniz",
-  "languageSwitch": "Dili Değiştir",
-  "posts": "Gönderiler"
+  "language": "Dil",
+  "posts": "Gönderiler",
+  "logout": "Çıkış Yap"
 }

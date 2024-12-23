@@ -106,6 +106,21 @@ export const paddingStyle = StyleSheet.create({
   },
 });
 
+export const paddingHorizontalStyle = StyleSheet.create({
+  paddingHorizontalSm: {
+    paddingHorizontal: Spacing.small,
+  },
+  paddingHorizontalMd: {
+    paddingHorizontal: Spacing.medium,
+  },
+  paddingHorizontalLg: {
+    paddingHorizontal: Spacing.large,
+  },
+  paddingHorizontalXl: {
+    paddingHorizontal: Spacing.xLarge,
+  },
+});
+
 export const paddingVerticalStyle = StyleSheet.create({
   paddingVerticalSm: {
     paddingVertical: Spacing.small,
@@ -254,6 +269,9 @@ export const textFontSizeStyle = StyleSheet.create({
 export const textFontWeightStyle = StyleSheet.create({
   textFontWeightBold: {
     fontWeight: "bold",
+  },
+  textFontWeight500: {
+    fontWeight: "500",
   },
   textFontWeightNormal: {
     fontWeight: "normal",

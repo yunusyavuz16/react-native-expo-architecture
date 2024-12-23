@@ -1,9 +1,11 @@
 import { delay } from "@/utils/delay";
 import { getValue } from "@/utils/storeSecureStorage";
 import { useRouter } from "expo-router";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
+import { useLocalization } from "./useLocalization";
 
 export const useRouteNavigation = () => {
+  useLocalization();
   const router = useRouter();
 
   const fetchData = async () => {

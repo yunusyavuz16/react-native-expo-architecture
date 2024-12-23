@@ -1,5 +1,6 @@
 {
   "welcome": "Welcome",
-  "languageSwitch": "Switch Language",
-  "posts": "Posts"
+  "language": "Language",
+  "posts": "Posts",
+  "logout": "Log out"
 }

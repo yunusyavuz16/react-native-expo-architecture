@@ -1,29 +1,23 @@
+import { ThemedText } from "@/components/ThemedText";
 import { Spacing } from "@/constants/Spacing";
 import { useAllColors } from "@/hooks/theme/useAllColors";
-import useStyles from "@/hooks/theme/useStyles";
 import { useTheme } from "@/providers/theme/ThemeContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React, { memo } from "react";
 import { StyleSheet, Switch } from "react-native";
-import { ThemedText } from "../ThemedText";
-import { ThemedView } from "../ThemedView";
+import SettingRow from "./SettingRow";
 
 const DarkModeToggle = () => {
   const { toggleTheme, theme } = useTheme();
-  const borderColorStyle = useStyles().borderColor;
-  const { agGray600, agGray300, agPrimary } = useAllColors();
+  const { agGray300, agPrimary, text } = useAllColors();
   const toggleSwitch = () => {
     toggleTheme();
   };
   const isEnabled = theme === "dark";
 
   return (
-    <ThemedView style={[styles.container, borderColorStyle]}>
-      <Ionicons
-        name="moon-outline"
-        size={24}
-        color={isEnabled ? agPrimary : agGray600}
-      />
+    <SettingRow>
+      <Ionicons name="moon-outline" size={24} color={text} />
 
       <ThemedText style={styles.text}>Dark Mode</ThemedText>
       <Switch
@@ -33,18 +27,11 @@ const DarkModeToggle = () => {
         onValueChange={toggleSwitch}
         value={isEnabled}
       />
-    </ThemedView>
+    </SettingRow>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: Spacing.large,
-    borderRadius: 15,
-  },
   text: {
     flex: 1,
     marginLeft: Spacing.medium,

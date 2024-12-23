@@ -3,4 +3,5 @@ export const SECURE_STORE_KEYS = {
   ANDROID_AUTH: "secureAndroidAndroidKey",
   IOS_AUTH: "secureAndroidIOSKey",
   DEFAULT_AUTH: "secureAndroidDefault",
+  LOCALIZATION: "localization",
 };
