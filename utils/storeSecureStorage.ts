@@ -1,6 +1,11 @@
 import * as SecureStore from "expo-secure-store";
+import { Platform } from "react-native";
 
-const key = "secureAndroidIOSKey";
+const key = Platform.select({
+  android: "secureAndroidAndroidKey",
+  ios: "secureAndroidIOSKey",
+  default: "secureAndroidDefaultKey",
+});
 
 async function storeSecureStorage(value: any) {
   try {
