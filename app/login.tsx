@@ -1,6 +1,7 @@
 import EasyLogin from "@/components/EasyLogin";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import LoginForm from "@/components/login-form";
 import ScreenLayout from "@/components/screen-layout";
 import {
   alignItemsStyle,
@@ -11,15 +12,14 @@ import {
   marginStyle,
   paddingStyle,
   textFontSizeStyle,
+  widthStyle,
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import useAuth from "@/hooks/useAuth";
 import { useState } from "react";
-import { Button, TextInput, View } from "react-native";
+import { View } from "react-native";
 
 export default function LoginScreen() {
-  const [username, setUsername] = useState("admin");
-  const { handleLogin } = useAuth(username);
   const { agGray700Color, agPrimaryColor, borderColor } = useStyles();
   return (
     <ScreenLayout>
@@ -28,10 +28,12 @@ export default function LoginScreen() {
           flexStyle.flex1,
           justifyContentStyle.justifyContentCenter,
           alignItemsStyle.alignItemsCenter,
+          paddingStyle.paddingLg,
         ]}
       >
         <ThemedView
           style={[
+            widthStyle.width100,
             justifyContentStyle.justifyContentCenter,
             alignItemsStyle.alignItemsCenter,
             gapStyle.gapLg,
@@ -52,7 +54,7 @@ export default function LoginScreen() {
               <ThemedText
                 style={[agGray700Color, textFontSizeStyle.textFontSizeMd]}
               >
-                Need an account?
+                Need an account?{" "}
                 <ThemedText style={agPrimaryColor}>Sign up</ThemedText>
               </ThemedText>
             </View>
@@ -66,13 +68,7 @@ export default function LoginScreen() {
               OR
             </ThemedText>
           </View>
-          <View></View>
-          <TextInput
-            placeholder="Enter your username"
-            value={username}
-            onChangeText={setUsername}
-          />
-          <Button title="Login" onPress={handleLogin} />
+          <LoginForm />
         </ThemedView>
       </View>
     </ScreenLayout>

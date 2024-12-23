@@ -31,6 +31,7 @@ export const Colors = {
     agGray700: "#4B5675",
     agGray800: "#252F4A",
     agGray900: "#071437",
+    agLightActive: "#FCFCFC",
   },
   dark: {
     screenBackground: AG_BG_PRIMARY_DARK,
@@ -51,5 +52,6 @@ export const Colors = {
     agGray700: "#9A9CAE",
     agGray800: "#B5B7C8",
     agGray900: "#F5F5F5",
+    agLightActive: "#1F212A",
   },
 };

@@ -1,12 +1,22 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { paddingStyle } from "@/constants/Styles";
+import useStyles from "@/hooks/theme/useStyles";
+import React from "react";
+import { TextInput, TextInputProps } from "react-native";
 
-const AgInput = () => {
+const AgInput: React.FC<TextInputProps> = ({ style, ...otherProps }) => {
+  const { agGray900Color, agLightActive, borderColor } = useStyles();
   return (
-    <View>
-      <Text>AgInput</Text>
-    </View>
-  )
-}
+    <TextInput
+      style={[
+        agGray900Color,
+        agLightActive,
+        paddingStyle.paddingLg,
+        borderColor,
+        style,
+      ]}
+      {...otherProps}
+    />
+  );
+};
 
-export default AgInput
+export default AgInput;

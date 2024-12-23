@@ -20,11 +20,16 @@ const useStyles = () => {
     agPrimary,
     agGray300,
     agGray700,
+    agLightActive,
   } = useAllColors();
 
   return {
     screenBackground: screenBackgroundStyle(screenBackground),
+    agLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
+    agBgPrimaryColor: screenBackgroundStyle(agPrimary).containerBacgkround,
     borderColor: borderStyle(agGray300).border,
+    agPrimaryBorderColor: borderStyle(agPrimary).border,
+    agPrimaryBorderSmRounded: borderStyle(agPrimary).borderSmRounded,
     agGray100Color: agTextColorStyle(agGray100).textColor,
     agGray200Color: agTextColorStyle(agGray200).textColor,
     agGray300Color: agTextColorStyle(agGray300).textColor,

@@ -16,6 +16,12 @@ export const borderStyle = (borderColor: string) =>
       borderWidth: 0.75,
       borderRadius: 15,
     },
+    borderSmRounded: {
+      borderRadius: 5,
+
+      borderColor: borderColor,
+      borderWidth: 0.75,
+    },
   });
 
 export const agTextColorStyle = (agGray: string) =>
@@ -37,6 +43,36 @@ export const marginStyle = StyleSheet.create({
   },
   marginXl: {
     margin: Spacing.xLarge,
+  },
+});
+
+export const marginBottomStyle = StyleSheet.create({
+  marginBottomSm: {
+    marginBottom: Spacing.small,
+  },
+  marginBottomMd: {
+    marginBottom: Spacing.medium,
+  },
+  marginBottomLg: {
+    marginBottom: Spacing.large,
+  },
+  marginBottomXl: {
+    marginBottom: Spacing.xLarge,
+  },
+});
+
+export const marginLeftStyle = StyleSheet.create({
+  marginLeftSm: {
+    marginLeft: Spacing.small,
+  },
+  marginLeftMd: {
+    marginLeft: Spacing.medium,
+  },
+  marginLeftLg: {
+    marginLeft: Spacing.large,
+  },
+  marginLeftXl: {
+    marginLeft: Spacing.xLarge,
   },
 });
 
@@ -178,5 +214,36 @@ export const textFontSizeStyle = StyleSheet.create({
   },
   textFontSizeXl: {
     fontSize: Typography.fontSizeExtraLarge,
+  },
+});
+
+export const widthStyle = StyleSheet.create({
+  width100: {
+    width: "100%",
+  },
+  width50: {
+    width: "50%",
+  },
+  width25: {
+    width: "25%",
+  },
+  width75: {
+    width: "75%",
+  },
+});
+
+
+export const positionStyle = StyleSheet.create({
+  positionRelative: {
+    position: "relative",
+  },
+  positionAbsolute: {
+    position: "absolute",
+  },
+  positionFixed: {
+    position: "fixed",
+  },
+  positionSticky: {
+    position: "sticky",
   },
 });
