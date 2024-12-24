@@ -11,6 +11,10 @@ const AG_PRIMARY_DARK = "#006AE6";
 const AG_BG_PRIMARY_LIGHT = "#EDF0F8";
 const AG_BG_PRIMARY_DARK = "#1a1b24";
 
+// danger
+const AG_DANGER_LIGHT = "#F8285A";
+const AG_DANGER_DARK = "#E42855";
+
 export const Colors = {
   light: {
     screenBackground: AG_BG_PRIMARY_LIGHT,
@@ -23,6 +27,7 @@ export const Colors = {
     tabIconSelected: AG_PRIMARY,
     agLight: AG_WHITE,
     agPrimary: AG_PRIMARY,
+    agDanger: AG_DANGER_LIGHT,
     agGray100: "#F9F9F9",
     agGray200: "#F1F1F4",
     agGray300: "#DBDFE9",
@@ -41,6 +46,7 @@ export const Colors = {
     background: "#1F212A",
     tint: AG_WHITE,
     agPrimary: AG_PRIMARY_DARK,
+    agDanger: AG_DANGER_DARK,
     icon: "#9BA1A6",
     tabIconDefault: "#9BA1A6",
     tabIconSelected: AG_PRIMARY_DARK,

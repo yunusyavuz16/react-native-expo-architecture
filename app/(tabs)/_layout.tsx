@@ -6,9 +6,11 @@ import React from "react";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { useAllColors } from "@/hooks/theme/useAllColors";
 import { Ionicons } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
 
 export default function TabLayout() {
   const { tint, background } = useAllColors();
+  const { t } = useTranslation();
 
   return (
     <Tabs
@@ -28,7 +30,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: t("dashboard"),
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
           ),

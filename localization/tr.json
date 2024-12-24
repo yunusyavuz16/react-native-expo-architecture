@@ -2,5 +2,6 @@
   "welcome": "Hoşgeldiniz",
   "language": "Dil",
   "posts": "Gönderiler",
-  "logout": "Çıkış Yap"
+  "logout": "Çıkış Yap",
+  "dashboard": "Panel"
 }

@@ -21,13 +21,23 @@ const useStyles = () => {
     agGray300,
     agGray700,
     agLightActive,
-    textLight
+    textLight,
+    agDanger,
   } = useAllColors();
 
   return {
     screenBackground: screenBackgroundStyle(screenBackground),
     agLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
     agBgPrimaryColor: screenBackgroundStyle(agPrimary).containerBacgkround,
+    agBgGray100Style: screenBackgroundStyle(agGray100).containerBacgkround,
+    agBgGray200Style: screenBackgroundStyle(agGray200).containerBacgkround,
+    agBgGray300Style: screenBackgroundStyle(agGray300).containerBacgkround,
+    agBgGray400Style: screenBackgroundStyle(agGray400).containerBacgkround,
+    agBgGray500Style: screenBackgroundStyle(agGray500).containerBacgkround,
+    agBgGray600Style: screenBackgroundStyle(agGray600).containerBacgkround,
+    agBgGray700Style: screenBackgroundStyle(agGray700).containerBacgkround,
+    agBgGray800Style: screenBackgroundStyle(agGray800).containerBacgkround,
+    agBgGray900Style: screenBackgroundStyle(agGray900).containerBacgkround,
     borderColor: borderStyle(agGray300).border,
 
     ag600BorderColor: borderStyle(agGray600).border,
@@ -43,6 +53,7 @@ const useStyles = () => {
     agGray800Color: agTextColorStyle(agGray800).textColor,
     agGray900Color: agTextColorStyle(agGray900).textColor,
     agPrimaryColor: agTextColorStyle(agPrimary).textColor,
+    agBgDangerStyle: screenBackgroundStyle(agDanger).containerBacgkround,
     agTextLightStyle: agTextColorStyle(textLight).textColor,
   };
 };

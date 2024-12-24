@@ -1,9 +1,10 @@
 //app/(tabs)/index.tsx
 
 import PostHeaderComponent from "@/components/post-header";
-import PostContainer from "@/components/post/PostContainer";
 import ScreenLayout from "@/components/screen-layout";
 import { flexStyle } from "@/constants/Styles";
+import Dashboard from "@/screens/home/Dashboard";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { View } from "react-native";
 
@@ -25,7 +26,7 @@ export default function HomeScreen() {
       />
 
       <ScreenLayout>
-        <PostContainer />
+        <Dashboard />
       </ScreenLayout>
     </View>
   );

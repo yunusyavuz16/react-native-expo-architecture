@@ -91,6 +91,21 @@ export const marginLeftStyle = StyleSheet.create({
   },
 });
 
+export const marginRightStyle = StyleSheet.create({
+  marginRightSm: {
+    marginRight: Spacing.small,
+  },
+  marginRightMd: {
+    marginRight: Spacing.medium,
+  },
+  marginRightLg: {
+    marginRight: Spacing.large,
+  },
+  marginRightXl: {
+    marginRight: Spacing.xLarge,
+  },
+});
+
 export const paddingStyle = StyleSheet.create({
   paddingSm: {
     padding: Spacing.small,
@@ -135,7 +150,6 @@ export const paddingVerticalStyle = StyleSheet.create({
     paddingVertical: Spacing.xLarge,
   },
 });
-
 
 export const flexStyle = StyleSheet.create({
   flex1: {
@@ -294,8 +308,46 @@ export const widthStyle = StyleSheet.create({
   width75: {
     width: "75%",
   },
+  constWidth25: {
+    width: 25,
+  },
+  constWidth50: {
+    width: 50,
+  },
+  constWidth75: {
+    width: 75,
+  },
+  constWidth100: {
+    width: 100,
+  },
 });
 
+export const heightStyle = StyleSheet.create({
+  height100: {
+    height: "100%",
+  },
+  height50: {
+    height: "50%",
+  },
+  height25: {
+    height: "25%",
+  },
+  height75: {
+    height: "75%",
+  },
+  constHeight25: {
+    height: 25,
+  },
+  constHeight50: {
+    height: 50,
+  },
+  constHeight75: {
+    height: 75,
+  },
+  constHeight100: {
+    height: 100,
+  },
+});
 
 export const positionStyle = StyleSheet.create({
   positionRelative: {
