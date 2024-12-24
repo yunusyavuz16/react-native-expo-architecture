@@ -22,13 +22,21 @@ const useStyles = () => {
     agGray700,
     agLightActive,
     textLight,
+    agSuccess,
     agDanger,
+    agInfo,
+    agSecondary,
+    agWarning,
   } = useAllColors();
 
   return {
     screenBackground: screenBackgroundStyle(screenBackground),
     agLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
-    agBgPrimaryColor: screenBackgroundStyle(agPrimary).containerBacgkround,
+    agBgSuccessStyle: screenBackgroundStyle(agSuccess).containerBacgkround,
+    agBgPrimaryStyle: screenBackgroundStyle(agPrimary).containerBacgkround,
+    agBgInfoStyle: screenBackgroundStyle(agInfo).containerBacgkround,
+    agBgSecondaryStyle: screenBackgroundStyle(agSecondary).containerBacgkround,
+    agBgWarningStyle: screenBackgroundStyle(agWarning).containerBacgkround,
     agBgGray100Style: screenBackgroundStyle(agGray100).containerBacgkround,
     agBgGray200Style: screenBackgroundStyle(agGray200).containerBacgkround,
     agBgGray300Style: screenBackgroundStyle(agGray300).containerBacgkround,
@@ -55,6 +63,7 @@ const useStyles = () => {
     agPrimaryColor: agTextColorStyle(agPrimary).textColor,
     agBgDangerStyle: screenBackgroundStyle(agDanger).containerBacgkround,
     agTextLightStyle: agTextColorStyle(textLight).textColor,
+    agTextSuccessStyle: agTextColorStyle(agSuccess).textColor,
   };
 };
 export default useStyles;

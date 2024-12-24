@@ -23,7 +23,7 @@ function AgButton({ style, text, type, ...otherProps }: ThemedViewProps) {
   const {
     borderColor,
     agGray700Color,
-    agBgPrimaryColor,
+    agBgPrimaryStyle,
     agPrimaryBorderColor,
     agTextLightStyle,
   } = useStyles();
@@ -31,7 +31,7 @@ function AgButton({ style, text, type, ...otherProps }: ThemedViewProps) {
   return (
     <TouchableOpacity
       style={[
-        type === "primary" ? agBgPrimaryColor : { backgroundColor },
+        type === "primary" ? agBgPrimaryStyle : { backgroundColor },
         type === "primary" ? agPrimaryBorderColor : borderColor,
         paddingStyle.paddingMd,
         justifyContentStyle.justifyContentCenter,

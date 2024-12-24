@@ -10,7 +10,7 @@ const AgCheckBox = ({
   value: boolean;
   onValueChange: () => void;
 }) => {
-  const { agBgPrimaryColor,agLightActive, agPrimaryBorderColor, ag600BorderColor } =
+  const { agBgPrimaryStyle,agLightActive, agPrimaryBorderColor, ag600BorderColor } =
     useStyles();
   return (
     <TouchableOpacity
@@ -19,7 +19,7 @@ const AgCheckBox = ({
         styles.checkbox,
         agLightActive,
         ag600BorderColor,
-        value && agBgPrimaryColor,
+        value && agBgPrimaryStyle,
         value && agPrimaryBorderColor,
         borderRadiusStyle.borderRadiusSm,
       ]}

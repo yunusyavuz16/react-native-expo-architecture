@@ -15,6 +15,22 @@ const AG_BG_PRIMARY_DARK = "#1a1b24";
 const AG_DANGER_LIGHT = "#F8285A";
 const AG_DANGER_DARK = "#E42855";
 
+// success
+const AG_SUCCESS_LIGHT = "#17C653";
+const AG_SUCCESS_DARK = "#00A261";
+
+// secondary
+const AG_SECONDARY_LIGHT = "#F1F1F4";
+const AG_SECONDARY_DARK = "#363843";
+
+// info
+const AG_INFO_LIGHT = "#7239EA";
+const AG_INFO_DARK = "#883FFF";
+
+// warning
+const AG_WARNING_LIGHT = "#F6C000";
+const AG_WARNING_DARK = "#C59A00";
+
 export const Colors = {
   light: {
     screenBackground: AG_BG_PRIMARY_LIGHT,
@@ -28,6 +44,11 @@ export const Colors = {
     agLight: AG_WHITE,
     agPrimary: AG_PRIMARY,
     agDanger: AG_DANGER_LIGHT,
+    agSuccess: AG_SUCCESS_LIGHT,
+    agSecondary: AG_SECONDARY_LIGHT,
+    agInfo: AG_INFO_LIGHT,
+    agWarning: AG_WARNING_LIGHT,
+
     agGray100: "#F9F9F9",
     agGray200: "#F1F1F4",
     agGray300: "#DBDFE9",
@@ -47,6 +68,11 @@ export const Colors = {
     tint: AG_WHITE,
     agPrimary: AG_PRIMARY_DARK,
     agDanger: AG_DANGER_DARK,
+    agSuccess: AG_SUCCESS_DARK,
+    agSecondary: AG_SECONDARY_DARK,
+    agInfo: AG_INFO_DARK,
+    agWarning: AG_WARNING_DARK,
+
     icon: "#9BA1A6",
     tabIconDefault: "#9BA1A6",
     tabIconSelected: AG_PRIMARY_DARK,

@@ -59,6 +59,19 @@ export const marginBottomStyle = StyleSheet.create({
   marginBottomXl: {
     marginBottom: Spacing.xLarge,
   },
+  minusMarginBottomSm: {
+    marginBottom: -Spacing.small,
+  },
+  minusMarginBottomMd: {
+    marginBottom: -Spacing.medium,
+  },
+  minusMarginBottomLg: {
+    marginBottom: -Spacing.large,
+  },
+  minusMarginBottomXl: {
+    marginBottom: -Spacing.xLarge,
+  },
+
 });
 
 export const marginTopStyle = StyleSheet.create({
@@ -88,6 +101,18 @@ export const marginLeftStyle = StyleSheet.create({
   },
   marginLeftXl: {
     marginLeft: Spacing.xLarge,
+  },
+  minusMarginLeftSm: {
+    marginLeft: -Spacing.small,
+  },
+  minusMarginLeftMd: {
+    marginLeft: -Spacing.medium,
+  },
+  minusMarginLeftLg: {
+    marginLeft: -Spacing.large,
+  },
+  minusMarginLeftXl: {
+    marginLeft: -Spacing.xLarge,
   },
 });
 
