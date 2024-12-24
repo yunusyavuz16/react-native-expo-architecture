@@ -1,9 +1,11 @@
 import { Card } from "@/components/card";
 import { ThemedText } from "@/components/ThemedText";
 import {
+  alignItemsStyle,
   flexDirectionStyle,
   justifyContentStyle,
   marginBottomStyle,
+  marginLeftStyle,
   marginRightStyle,
   marginTopStyle,
   textFontSizeStyle,
@@ -11,13 +13,18 @@ import {
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import { Text, View } from "react-native";
+import AgProgressCircular from "../charts/AgProgressCircular";
 
 const Widget3 = () => {
   const { agBgSuccessStyle, agTextSuccessStyle } = useStyles();
 
   return (
     <Card containerStyle={[marginTopStyle.marginTopLg]}>
-      <View style={marginBottomStyle.marginBottomMd}>
+      <View
+        style={[
+          flexDirectionStyle.flexDirectionRow,
+        ]}
+      >
         <ThemedText
           style={[
             textFontSizeStyle.textFontSizeXl,
@@ -26,24 +33,25 @@ const Widget3 = () => {
         >
           {"$69,700"}
         </ThemedText>
-        <View style={flexDirectionStyle.flexDirectionRow}>
-          <Text
-            style={[
-              textFontSizeStyle.textFontSizeMd,
-              agTextSuccessStyle,
-              marginRightStyle.marginRightSm,
-            ]}
-          >
-            {"▲ 2.2%"}
-          </Text>
-          <ThemedText style={[textFontSizeStyle.textFontSizeMd]}>
-            {"Projects Earnings in April"}
-          </ThemedText>
-        </View>
+        <ThemedText
+          style={[
+            textFontSizeStyle.textFontSizeMd,
+            agTextSuccessStyle,
+            marginLeftStyle.marginLeftSm,
+            alignItemsStyle.alignItemsCenter,
+          ]}
+        >
+          {"▲ 2.2%"}
+        </ThemedText>
+      </View>
+      <View style={flexDirectionStyle.flexDirectionRow}>
+        <ThemedText style={[textFontSizeStyle.textFontSizeMd]}>
+          {"Projects Earnings in April"}
+        </ThemedText>
       </View>
 
       <View style={marginTopStyle.marginTopMd}>
-        {/* <ProgressCircle size={100} progressData={[45, 25, 30]} /> */}
+        <AgProgressCircular />
         <View style={marginTopStyle.marginTopLg}>
           <View
             style={[
