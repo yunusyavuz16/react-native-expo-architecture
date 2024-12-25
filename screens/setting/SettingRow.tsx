@@ -11,7 +11,7 @@ import React from "react";
 import { StyleSheet, ViewProps } from "react-native";
 
 const SettingRow: React.FC<ViewProps> = ({ style, ...otherProps }) => {
-  const borderColorStyle = useStyles().borderColor;
+  const borderColorStyle = useStyles().agBorderGray300Style;
   return (
     <ThemedView
       style={[

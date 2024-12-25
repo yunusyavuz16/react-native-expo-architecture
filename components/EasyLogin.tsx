@@ -18,13 +18,13 @@ function EasyLogin({
   buttonText: string;
   logo: "google" | "apple";
 }) {
-  const { borderColor } = useStyles();
+  const { agBorderGray300Style } = useStyles();
   const { text } = useAllColors();
 
   return (
     <TouchableOpacity
       style={[
-        borderColor,
+        agBorderGray300Style,
         paddingStyle.paddingMd,
         flexDirectionStyle.flexDirectionRow,
         justifyContentStyle.justifyContentCenter,

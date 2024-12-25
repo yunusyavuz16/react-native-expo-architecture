@@ -132,6 +132,9 @@ export const marginRightStyle = StyleSheet.create({
 });
 
 export const paddingStyle = StyleSheet.create({
+  paddingXs: {
+    padding: Spacing.small / 2,
+  },
   paddingSm: {
     padding: Spacing.small,
   },
@@ -243,6 +246,9 @@ export const gapStyle = StyleSheet.create({
 });
 
 export const borderRadiusStyle = StyleSheet.create({
+  borderRadiusXs: {
+    borderRadius: Spacing.small / 2,
+  },
   borderRadiusSm: {
     borderRadius: Spacing.small,
   },

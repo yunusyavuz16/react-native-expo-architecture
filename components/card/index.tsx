@@ -13,13 +13,13 @@ const Card: React.FC<
     containerStyle?: StyleProp<ViewStyle>;
   } & PropsWithChildren
 > = ({ containerStyle, children }) => {
-  const { borderColor } = useStyles();
+  const { agBorderGray300Style } = useStyles();
   return (
     <ThemedView
       style={[
         borderRadiusStyle.borderRadiusLg,
         paddingStyle.paddingLg,
-        borderColor,
+        agBorderGray300Style,
         containerStyle,
       ]}
     >

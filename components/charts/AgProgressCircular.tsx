@@ -1,24 +1,35 @@
-import { useAllColors } from "@/hooks/theme/useAllColors";
-import React from "react";
-import { View, Text } from "react-native";
-import { PieChart } from "react-native-gifted-charts";
-import { ThemedText } from "../ThemedText";
+import {
+  AG_DANGER_LIGHT,
+  AG_GRAY_300_LIGHT,
+  AG_PRIMARY,
+  AG_SECONDARY_LIGHT,
+  AG_SUCCESS_LIGHT,
+} from "@/constants/Colors";
 import {
   alignItemsStyle,
-  flexDirectionStyle,
+  flexStyle,
+  heightStyle,
   justifyContentStyle,
   textFontSizeStyle,
+  widthStyle,
 } from "@/constants/Styles";
+import React from "react";
+import { PieChart, pieDataItem } from "react-native-gifted-charts";
+import { ThemedText } from "../ThemedText";
 import { ThemedView } from "../ThemedView";
+import { useThemeColor } from "@/hooks/theme/useThemeColor";
 
-const AgProgressCircular = () => {
-  const { agPrimary, agGray300, agSuccess, agDanger } = useAllColors();
-  const pieData = [
-    { value: 35, color: agPrimary },
-    { value: 20, color: agSuccess },
-    { value: 15, color: agDanger },
-    { value: 30, color: agGray300 },
-  ];
+const data = [
+  { value: 20, color: AG_GRAY_300_LIGHT },
+  { value: 30, color: AG_SUCCESS_LIGHT },
+  { value: 35, color: AG_PRIMARY },
+];
+
+const AgProgressCircular: React.FC<{
+  pieData?: pieDataItem[];
+  percentage?: number | string;
+}> = ({ pieData = data, percentage }) => {
+  const backgroundColor = useThemeColor("background");
   return (
     <ThemedView
       style={[
@@ -30,11 +41,12 @@ const AgProgressCircular = () => {
         donut
         innerRadius={40}
         radius={60}
+        backgroundColor={backgroundColor}
         data={pieData}
         centerLabelComponent={() => {
           return (
             <ThemedText style={textFontSizeStyle.textFontSizeLg}>
-              70%
+              {percentage}
             </ThemedText>
           );
         }}

@@ -18,8 +18,8 @@ export default function AgDropdown<T>({
   value: any;
   items: any;
 } & DropDownPickerProps<T>) {
-  const { agPrimaryBorderColor } = useStyles();
-  const { agPrimary, background, text } = useAllColors();
+  const { agBorderPrimaryStyle } = useStyles();
+  const { background, text } = useAllColors();
   return (
     <DropDownPicker
       open={open}
@@ -28,7 +28,7 @@ export default function AgDropdown<T>({
       textStyle={{ color: text, textAlign: "center" }}
       dropDownContainerStyle={[
         styles.dropdown,
-        agPrimaryBorderColor,
+        agBorderPrimaryStyle,
         borderRadiusStyle.borderRadiusMd,
         { backgroundColor: background },
       ]}

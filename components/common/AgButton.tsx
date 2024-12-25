@@ -21,10 +21,10 @@ export type ThemedViewProps = ViewProps &
 function AgButton({ style, text, type, ...otherProps }: ThemedViewProps) {
   const backgroundColor = useThemeColor("background");
   const {
-    borderColor,
+    agBorderGray300Style,
     agGray700Color,
     agBgPrimaryStyle,
-    agPrimaryBorderColor,
+    agBorderPrimaryStyle,
     agTextLightStyle,
   } = useStyles();
 
@@ -32,7 +32,7 @@ function AgButton({ style, text, type, ...otherProps }: ThemedViewProps) {
     <TouchableOpacity
       style={[
         type === "primary" ? agBgPrimaryStyle : { backgroundColor },
-        type === "primary" ? agPrimaryBorderColor : borderColor,
+        type === "primary" ? agBorderPrimaryStyle : agBorderGray300Style,
         paddingStyle.paddingMd,
         justifyContentStyle.justifyContentCenter,
         alignItemsStyle.alignItemsCenter,

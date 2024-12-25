@@ -3,6 +3,7 @@ import { ThemedText } from "@/components/ThemedText";
 import {
   alignItemsStyle,
   flexDirectionStyle,
+  flexStyle,
   justifyContentStyle,
   marginBottomStyle,
   marginLeftStyle,
@@ -13,46 +14,57 @@ import {
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import { Text, View } from "react-native";
+import AgBadge from "../AgBadge";
 import AgProgressCircular from "../charts/AgProgressCircular";
+import AgBullet from "../AgBullet";
 
 const Widget3 = () => {
-  const { agBgSuccessStyle, agTextSuccessStyle } = useStyles();
+  const { agGray600Color, agGray700Color, agBgPrimaryStyle, agBgGray300Style } =
+    useStyles();
 
   return (
     <Card containerStyle={[marginTopStyle.marginTopLg]}>
-      <View
-        style={[
-          flexDirectionStyle.flexDirectionRow,
-        ]}
-      >
+      <View style={[flexDirectionStyle.flexDirectionRow]}>
+        <ThemedText style={[agGray600Color]}>$</ThemedText>
         <ThemedText
           style={[
             textFontSizeStyle.textFontSizeXl,
             textFontWeightStyle.textFontWeightBold,
           ]}
         >
-          {"$69,700"}
+          {"69,700"}
         </ThemedText>
-        <ThemedText
-          style={[
-            textFontSizeStyle.textFontSizeMd,
-            agTextSuccessStyle,
-            marginLeftStyle.marginLeftSm,
-            alignItemsStyle.alignItemsCenter,
-          ]}
-        >
-          {"▲ 2.2%"}
-        </ThemedText>
+
+        <AgBadge
+          style={marginLeftStyle.marginLeftSm}
+          value="2.2"
+          prefix="▲ "
+          suffix="%"
+          variant="success"
+        />
       </View>
       <View style={flexDirectionStyle.flexDirectionRow}>
-        <ThemedText style={[textFontSizeStyle.textFontSizeMd]}>
+        <ThemedText style={[textFontSizeStyle.textFontSizeMd, agGray600Color]}>
           {"Projects Earnings in April"}
         </ThemedText>
       </View>
 
-      <View style={marginTopStyle.marginTopMd}>
+      <View
+        style={[
+          marginTopStyle.marginTopMd,
+          flexDirectionStyle.flexDirectionRow,
+          justifyContentStyle.justifyContentSpaceBetween,
+          alignItemsStyle.alignItemsCenter,
+        ]}
+      >
         <AgProgressCircular />
-        <View style={marginTopStyle.marginTopLg}>
+        <View
+          style={[
+            marginTopStyle.marginTopLg,
+            flexStyle.flex1,
+            marginLeftStyle.marginLeftMd,
+          ]}
+        >
           <View
             style={[
               flexDirectionStyle.flexDirectionRow,
@@ -60,8 +72,22 @@ const Widget3 = () => {
               marginBottomStyle.marginBottomSm,
             ]}
           >
-            <Text>Leaf CRM</Text>
-            <Text>{"$7,660"}</Text>
+            <View
+              style={[
+                flexDirectionStyle.flexDirectionRow,
+                justifyContentStyle.justifyContentCenter,
+                alignItemsStyle.alignItemsCenter,
+              ]}
+            >
+              <AgBullet
+                style={[
+                  marginLeftStyle.marginLeftSm,
+                  marginRightStyle.marginRightSm,
+                ]}
+              />
+              <ThemedText>Leaf CRM</ThemedText>
+            </View>
+            <ThemedText style={agGray700Color}>{"$7,660"}</ThemedText>
           </View>
           <View
             style={[
@@ -70,8 +96,23 @@ const Widget3 = () => {
               marginBottomStyle.marginBottomSm,
             ]}
           >
-            <Text>Mivy App</Text>
-            <Text>{"$2,820"}</Text>
+            <View
+              style={[
+                flexDirectionStyle.flexDirectionRow,
+                justifyContentStyle.justifyContentCenter,
+                alignItemsStyle.alignItemsCenter,
+              ]}
+            >
+              <AgBullet
+                style={[
+                  marginLeftStyle.marginLeftSm,
+                  marginRightStyle.marginRightSm,
+                  agBgPrimaryStyle,
+                ]}
+              />
+              <ThemedText>Mivy App</ThemedText>
+            </View>
+            <ThemedText style={agGray700Color}>{"$2,820"}</ThemedText>
           </View>
           <View
             style={[
@@ -79,8 +120,23 @@ const Widget3 = () => {
               justifyContentStyle.justifyContentSpaceBetween,
             ]}
           >
-            <Text>Others</Text>
-            <Text>{"$45,257"}</Text>
+            <View
+              style={[
+                flexDirectionStyle.flexDirectionRow,
+                justifyContentStyle.justifyContentCenter,
+                alignItemsStyle.alignItemsCenter,
+              ]}
+            >
+              <AgBullet
+                style={[
+                  marginLeftStyle.marginLeftSm,
+                  marginRightStyle.marginRightSm,
+                  agBgGray300Style,
+                ]}
+              />
+              <ThemedText>Others</ThemedText>
+            </View>
+            <ThemedText style={agGray700Color}>{"$45,257"}</ThemedText>
           </View>
         </View>
       </View>

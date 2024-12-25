@@ -18,7 +18,7 @@ import useStyles from "@/hooks/theme/useStyles";
 import { View } from "react-native";
 
 export default function LoginScreen() {
-  const { agGray700Color, agPrimaryColor, borderColor } = useStyles();
+  const { agGray700Color, agPrimaryColor, agBorderGray300Style } = useStyles();
   return (
     <ScreenLayout>
       <View
@@ -36,7 +36,7 @@ export default function LoginScreen() {
             alignItemsStyle.alignItemsCenter,
             gapStyle.gapLg,
             paddingStyle.paddingLg,
-            borderColor,
+            agBorderGray300Style,
           ]}
         >
           <View
