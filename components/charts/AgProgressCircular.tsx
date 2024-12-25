@@ -1,23 +1,18 @@
 import {
-  AG_DANGER_LIGHT,
   AG_GRAY_300_LIGHT,
   AG_PRIMARY,
-  AG_SECONDARY_LIGHT,
-  AG_SUCCESS_LIGHT,
+  AG_SUCCESS_LIGHT
 } from "@/constants/Colors";
 import {
   alignItemsStyle,
-  flexStyle,
-  heightStyle,
   justifyContentStyle,
-  textFontSizeStyle,
-  widthStyle,
+  textFontSizeStyle
 } from "@/constants/Styles";
+import { useThemeColor } from "@/hooks/theme/useThemeColor";
 import React from "react";
 import { PieChart, pieDataItem } from "react-native-gifted-charts";
 import { ThemedText } from "../ThemedText";
 import { ThemedView } from "../ThemedView";
-import { useThemeColor } from "@/hooks/theme/useThemeColor";
 
 const data = [
   { value: 20, color: AG_GRAY_300_LIGHT },

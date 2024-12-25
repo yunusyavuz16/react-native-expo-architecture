@@ -1,3 +1,4 @@
+import PerformanceOverviewWidget from "@/components/charts/PerformanceOverviewWidget";
 import ExternalLinksWidget from "@/components/widgets/ExternalLinksWidget";
 import Widget1 from "@/components/widgets/Widget1";
 import Widget2 from "@/components/widgets/Widget2";
@@ -12,6 +13,7 @@ const Dashboard = () => {
       <Widget2 />
       <Widget3 />
       <ExternalLinksWidget />
+      <PerformanceOverviewWidget />
     </ScrollView>
   );
 };
