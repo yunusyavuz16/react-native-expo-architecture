@@ -1,3 +1,4 @@
+import ExternalLinksWidget from "@/components/widgets/ExternalLinksWidget";
 import Widget1 from "@/components/widgets/Widget1";
 import Widget2 from "@/components/widgets/Widget2";
 import Widget3 from "@/components/widgets/Widget3";
@@ -10,6 +11,7 @@ const Dashboard = () => {
       <Widget1 />
       <Widget2 />
       <Widget3 />
+      <ExternalLinksWidget />
     </ScrollView>
   );
 };

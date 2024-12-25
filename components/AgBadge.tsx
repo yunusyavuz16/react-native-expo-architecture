@@ -1,9 +1,8 @@
 import {
   alignItemsStyle,
   borderRadiusStyle,
-  marginLeftStyle,
   paddingHorizontalStyle,
-  textFontSizeStyle,
+  textFontSizeStyle
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import React from "react";

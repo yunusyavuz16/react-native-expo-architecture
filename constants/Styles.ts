@@ -150,6 +150,9 @@ export const paddingStyle = StyleSheet.create({
 });
 
 export const paddingHorizontalStyle = StyleSheet.create({
+  paddingHorizontal0: {
+    paddingHorizontal: 0,
+  },
   paddingHorizontalSm: {
     paddingHorizontal: Spacing.small,
   },
@@ -260,8 +263,55 @@ export const borderRadiusStyle = StyleSheet.create({
   },
   borderRadiusXl: {
     borderRadius: Spacing.xLarge,
+
   },
 });
+
+export const borderStyleStyle = StyleSheet.create({
+  borderStyleSolid: {
+    borderStyle: "solid",
+  },
+  borderStyleDotted: {
+    borderStyle: "dotted",
+  },
+  borderStyleDashed: {
+    borderStyle: "dashed",
+  },
+});
+
+export const borderBottomWidthStyle = StyleSheet.create({
+  borderBottom: {
+    borderBottomWidth: 1,
+  },
+  borderBottom2: {
+    borderBottomWidth: 2,
+  },
+  borderBottom3: {
+    borderBottomWidth: 3,
+  },
+  borderBottom4: {
+    borderBottomWidth: 4,
+  },
+});
+
+export const borderWidthStyle = StyleSheet.create({
+  boderWidth0: {
+    borderWidth: 0,
+  },
+  borderWidth1: {
+    borderWidth: 1,
+  },
+  borderWidth2: {
+    borderWidth: 2,
+  },
+  borderWidth3: {
+    borderWidth: 3,
+  },
+  borderWidth4: {
+    borderWidth: 4,
+  },
+});
+
 
 export const flexDirectionStyle = StyleSheet.create({
   flexDirectionRow: {
