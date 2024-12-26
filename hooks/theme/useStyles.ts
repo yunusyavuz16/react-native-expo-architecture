@@ -12,15 +12,15 @@ const useStyles = () => {
     screenBackground,
     agGray100,
     agGray200,
+    agGray300,
     agGray400,
     agGray500,
     agGray600,
+    agGray700,
     agGray800,
     agGray900,
     agPrimary,
     agPrimaryLight,
-    agGray300,
-    agGray700,
     agLightActive,
     textLight,
     agSuccess,
@@ -36,8 +36,8 @@ const useStyles = () => {
   } = useAllColors();
 
   return {
-    screenBackground: screenBackgroundStyle(screenBackground),
-    agLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
+    screenBgStyle: screenBackgroundStyle(screenBackground).containerBacgkround,
+    agBgLightActive: screenBackgroundStyle(agLightActive).containerBacgkround,
     agBgDangerStyle: screenBackgroundStyle(agDanger).containerBacgkround,
     agBgDangerLightStyle:
       screenBackgroundStyle(agDangerLight).containerBacgkround,
@@ -87,7 +87,6 @@ const useStyles = () => {
     agGray800Color: agTextColorStyle(agGray800).textColor,
     agGray900Color: agTextColorStyle(agGray900).textColor,
     agPrimaryColor: agTextColorStyle(agPrimary).textColor,
-    agBgDangerStyle: screenBackgroundStyle(agDanger).containerBacgkround,
     agTextLightStyle: agTextColorStyle(textLight).textColor,
     agTextSuccessStyle: agTextColorStyle(agSuccess).textColor,
     agTextSuccessLightStyle: agTextColorStyle(agSuccessLight).textColor,

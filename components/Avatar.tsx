@@ -3,10 +3,8 @@ import {
   borderRadiusStyle,
   heightStyle,
   justifyContentStyle,
-  marginRightStyle,
-  screenBackgroundStyle,
   textFontWeightStyle,
-  widthStyle,
+  widthStyle
 } from "@/constants/Styles";
 import React from "react";
 import {

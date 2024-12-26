@@ -6,7 +6,7 @@ import { TextInput, TextInputProps } from "react-native";
 const AgInput: React.FC<TextInputProps> = ({ style, ...otherProps }) => {
   const {
     agGray900Color,
-    agLightActive,
+    agBgLightActive,
     agBorderGray300Style,
     agGray600Color,
   } = useStyles();
@@ -15,7 +15,7 @@ const AgInput: React.FC<TextInputProps> = ({ style, ...otherProps }) => {
       placeholderTextColor={agGray600Color.color}
       style={[
         agGray900Color,
-        agLightActive,
+        agBgLightActive,
         paddingStyle.paddingLg,
         agBorderGray300Style,
         textFontSizeStyle.textFontSizeMd,

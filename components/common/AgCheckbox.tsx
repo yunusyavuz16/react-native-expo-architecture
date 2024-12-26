@@ -10,14 +10,18 @@ const AgCheckBox = ({
   value: boolean;
   onValueChange: () => void;
 }) => {
-  const { agBgPrimaryStyle,agLightActive, agBorderPrimaryStyle, agBorderGray600Style } =
-    useStyles();
+  const {
+    agBgPrimaryStyle,
+    agBgLightActive,
+    agBorderPrimaryStyle,
+    agBorderGray600Style,
+  } = useStyles();
   return (
     <TouchableOpacity
       onPress={onValueChange}
       style={[
         styles.checkbox,
-        agLightActive,
+        agBgLightActive,
         agBorderGray600Style,
         value && agBgPrimaryStyle,
         value && agBorderPrimaryStyle,
