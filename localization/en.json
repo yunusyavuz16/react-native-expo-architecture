@@ -17,5 +17,7 @@
   "notification": "Notification",
   "profile": "Profile",
   "settings": "Settings",
-  "setting": "Setting"
+  "setting": "Setting",
+  "feed": "Feed",
+  "home": "Home"
 }

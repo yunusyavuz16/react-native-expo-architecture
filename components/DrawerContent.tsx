@@ -14,8 +14,7 @@ import {
 import useStyles from "@/hooks/theme/useStyles";
 import { useThemeColor } from "@/hooks/theme/useThemeColor";
 import { MaterialIcons } from "@expo/vector-icons";
-import { DrawerContentComponentProps } from "@react-navigation/drawer";
-import { useNavigation } from "expo-router";
+import { Href, useRouter } from "expo-router";
 import React, { ComponentProps, useState } from "react";
 import {
   LayoutAnimation,
@@ -31,42 +30,24 @@ import { ThemedView } from "./ThemedView";
 
 interface SidbarDataItem {
   label: string;
-  link?: string;
+  link?: Href;
   icon?: ComponentProps<typeof MaterialIcons>["name"];
   items?: SidbarDataItem[];
 }
 
 const sidebarData: SidbarDataItem[] = [
   {
-    label: "Dashboards",
-    icon: "dashboard",
+    label: "Apps",
+    icon: "apps",
     items: [
-      { label: "Default", link: "dashboard", icon: "dashboard" },
-      { label: "eCommerce", link: "dashboard" },
-      { label: "Project", link: "dashboard" },
-      { label: "Marketinng", link: "dashboard" },
-      { label: "Bidding", link: "dashboard" },
-      { label: "POS System", link: "dashboard" },
-      { label: "Call Center", link: "dashboard" },
-      { label: "Logistics", link: "dashboard" },
-      { label: "Web Site Analytic", link: "dashboard" },
-      { label: "Finance Performance", link: "dashboard" },
-      { label: "Store Analytics", link: "dashboard" },
-      { label: "Social", link: "dashboard" },
-      { label: "Delivery", link: "dashboard" },
-      { label: "Crypto", link: "dashboard" },
-      { label: "School", link: "dashboard" },
-      { label: "Podast", link: "dashboard" },
-      { label: "Landing", link: "dashboard" },
+      { label: "Social", link: "/(drawer)/(social)" },
+      { label: "Entartainment", link: "/(drawer)/(entertainment)" },
     ],
   },
 ];
 
-const DrawerContent: React.FC<DrawerContentComponentProps> = ({
-  navigation,
-}) => {
-  const agGray600 = useThemeColor("agGray600");
-
+const DrawerContent = () => {
+  const agGray600 = useThemeColor("agPrimary");
   return (
     <ScrollView style={[flexStyle.flex1, { maxHeight: "100%" }]}>
       <ScreenLayout style={[flexStyle.flex1, paddingStyle.paddingLg]}>
@@ -86,7 +67,7 @@ const DrawerContent: React.FC<DrawerContentComponentProps> = ({
                 textFontWeightStyle.textFontWeightBold,
               ]}
             >
-              App Name
+              AppFormit
             </ThemedText>
           </View>
         </View>
@@ -105,11 +86,11 @@ const SidebarItem: React.FC<{
   item: SidbarDataItem;
   icon?: ComponentProps<typeof MaterialIcons>["name"];
 }> = ({ item, icon }) => {
-  const navigation = useNavigation();
   const agGray600 = useThemeColor("agGray600");
   const { agGray900Color, agGray800Color } = useStyles();
   const [collapsed, setCollapsed] = useState(true);
 
+  const router = useRouter();
   const toggleCollapse = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     setCollapsed(!collapsed);
@@ -152,7 +133,10 @@ const SidebarItem: React.FC<{
       {item.items && (
         <Collapsible
           collapsed={collapsed}
-          style={[paddingHorizontalStyle.paddingHorizontalMd]}
+          style={[
+            paddingHorizontalStyle.paddingHorizontalMd,
+            paddingVerticalStyle.paddingVerticalSm,
+          ]}
         >
           {item.items.map((subItem, index) => (
             <SidebarItem key={index} item={subItem} icon={subItem.icon} />
@@ -166,7 +150,7 @@ const SidebarItem: React.FC<{
             paddingHorizontalStyle.paddingHorizontalMd,
             paddingVerticalStyle.paddingVerticalSm,
           ]}
-          onPress={() => navigation.navigate(item.link as never)}
+          onPress={() => item.link && router.push(item.link)}
         >
           <ThemedText
             style={[

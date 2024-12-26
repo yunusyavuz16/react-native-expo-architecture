@@ -31,11 +31,9 @@ export default function RootLayout() {
     <AppProviders>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="(drawer)"
-          options={{ title: t("dashboard"), headerShown: false }}
-        />
+        <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
         <Stack.Screen name="login" options={{ headerShown: false }} />
+        <Stack.Screen name="setting" options={{ headerShown: false }} />
         <Stack.Screen name="search" options={{ title: t("search") }} />
         <Stack.Screen name="+not-found" />
       </Stack>

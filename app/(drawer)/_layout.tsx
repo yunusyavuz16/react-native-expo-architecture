@@ -9,7 +9,11 @@ export default function Layout() {
       <Drawer drawerContent={DrawerContent}>
         <Drawer.Screen
           options={{ headerShown: false }}
-          name="(tabs)" // This is the name of the page and must match the url from root
+          name="(social)" // This is the name of the page and must match the url from root
+        />
+        <Drawer.Screen
+          options={{ headerShown: false }}
+          name="(entertainment)" // This is the name of the page and must match the url from root
         />
       </Drawer>
     </GestureHandlerRootView>

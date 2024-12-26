@@ -8,17 +8,14 @@ const DashboardHeader = (props: BottomTabHeaderProps) => {
   return (
     <AgHeader>
       <AgHeader.Left
-        // menu
         iconName="menu"
         onPress={() => {
-          console.log("Menu pressed");
           // @ts-ignore
           props.navigation.openDrawer();
         }}
       />
-      <AgHeader.Title title={t("dashboard")} center={true} />
+      <AgHeader.Title title={t("feed")} center={true} />
       <AgHeader.Right
-        // more
         icons={[
           {
             name: "search",

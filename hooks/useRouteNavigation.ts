@@ -29,7 +29,7 @@ export const useRouteNavigation = () => {
   };
 
   const goHome = () => {
-    router.push("/(tabs)");
+    router.push("/(drawer)/(social)");
   };
 
   return { goLogin, goHome };
