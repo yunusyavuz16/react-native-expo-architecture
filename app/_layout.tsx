@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import AppProviders from "@/providers";
-import AgHeader from "@/components/AgHeader";
 import { useTranslation } from "react-i18next";
 
 SplashScreen.preventAutoHideAsync();

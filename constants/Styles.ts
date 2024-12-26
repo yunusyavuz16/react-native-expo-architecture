@@ -150,6 +150,41 @@ export const marginRightStyle = StyleSheet.create({
   },
 });
 
+// marginHorizontal
+export const marginHorizontalStyle = StyleSheet.create({
+  marginHorizontal0: {
+    marginHorizontal: 0,
+  },
+  marginHorizontalSm: {
+    marginHorizontal: Spacing.small,
+  },
+  marginHorizontalMd: {
+    marginHorizontal: Spacing.medium,
+  },
+  marginHorizontalLg: {
+    marginHorizontal: Spacing.large,
+  },
+  marginHorizontalXl: {
+    marginHorizontal: Spacing.xLarge,
+  },
+});
+
+export const marginVerticalStyle = StyleSheet.create({
+  marginVerticalSm: {
+    marginVertical: Spacing.small,
+  },
+  marginVerticalMd: {
+    marginVertical: Spacing.medium,
+  },
+  marginVerticalLg: {
+    marginVertical: Spacing.large,
+  },
+  marginVerticalXl: {
+    marginVertical: Spacing.xLarge,
+  },
+});
+
+
 export const paddingStyle = StyleSheet.create({
   paddingXs: {
     padding: Spacing.small / 2,
