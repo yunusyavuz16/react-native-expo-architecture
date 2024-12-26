@@ -3,5 +3,19 @@
   "language": "Language",
   "posts": "Posts",
   "logout": "Log out",
-  "dashboard": "Dashboard"
+  "dashboard": "Dashboard",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "submit": "Submit",
+  "name": "Name",
+  "title": "Title",
+  "search": "Search",
+  "notifications": "Notifications",
+  "notification": "Notification",
+  "profile": "Profile",
+  "settings": "Settings",
+  "setting": "Setting"
 }

@@ -3,5 +3,19 @@
   "language": "Dil",
   "posts": "Gönderiler",
   "logout": "Çıkış Yap",
-  "dashboard": "Panel"
+  "dashboard": "Panel",
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+  "email": "E-posta",
+  "password": "Şifre",
+  "confirmPassword": "Şifreyi Onayla",
+  "submit": "Gönder",
+  "name": "Ad",
+  "title": "Başlık",
+  "search": "Ara",
+  "notifications": "Bildirimler",
+  "notification": "Bildirim",
+  "profile": "Profil",
+  "settings": "Ayarlar",
+  "setting": "Ayar"
 }

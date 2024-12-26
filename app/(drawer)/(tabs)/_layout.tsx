@@ -5,6 +5,7 @@ import React from "react";
 
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { useAllColors } from "@/hooks/theme/useAllColors";
+import DashboardHeader from "@/screens/home/DashboardHeader";
 import { Ionicons } from "@expo/vector-icons";
 import { useTranslation } from "react-i18next";
 
@@ -16,7 +17,6 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: tint,
-        headerShown: false,
         tabBarStyle: {
           backgroundColor: background,
           borderTopWidth: 0,
@@ -30,6 +30,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
+          header: DashboardHeader,
           title: t("dashboard"),
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
@@ -39,7 +40,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="notification"
         options={{
-          title: "Notification",
+          headerShown: false,
+
+          title: t("notification"),
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="paperplane.fill" color={color} />
           ),
@@ -48,7 +51,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "Profile",
+          headerShown: false,
+
+          title: t("profile"),
           tabBarIcon: ({ color }) => (
             <Ionicons size={28} name="person" color={color} />
           ),
@@ -57,7 +62,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="setting"
         options={{
-          title: "Setting",
+          headerShown: false,
+
+          title: t("settings"),
           tabBarIcon: ({ color }) => (
             <Ionicons size={28} name="settings" color={color} />
           ),

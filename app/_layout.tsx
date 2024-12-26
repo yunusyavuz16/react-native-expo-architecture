@@ -1,3 +1,4 @@
+// app/_layout.tsx
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -6,10 +7,13 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import AppProviders from "@/providers";
+import AgHeader from "@/components/AgHeader";
+import { useTranslation } from "react-i18next";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const { t } = useTranslation();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -26,14 +30,14 @@ export default function RootLayout() {
 
   return (
     <AppProviders>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="index" />
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="login" />
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(drawer)"
+          options={{ title: t("dashboard"), headerShown: false }}
+        />
+        <Stack.Screen name="login" options={{ headerShown: false }} />
+        <Stack.Screen name="search" options={{ title: t("search") }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

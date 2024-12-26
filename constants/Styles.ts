@@ -75,6 +75,25 @@ export const marginBottomStyle = StyleSheet.create({
 });
 
 export const marginTopStyle = StyleSheet.create({
+  minusMarginTopSm: {
+    marginTop: -Spacing.small,
+  },
+  minusMarginTopMd: {
+    marginTop: -Spacing.medium,
+  },
+  minusMarginTopLg: {
+    marginTop: -Spacing.large,
+  },
+  minusMarginTopXl: {
+    marginTop: -Spacing.xLarge,
+  },
+  marginTop0: {
+    marginTop: 0,
+  },
+  marginTopXs: {
+    marginTop: Spacing
+      .small / 2,
+  },
   marginTopSm: {
     marginTop: Spacing.small,
   },
@@ -444,3 +463,19 @@ export const positionStyle = StyleSheet.create({
     position: "sticky",
   },
 });
+
+
+
+export const shadowStyle = StyleSheet.create({
+  shadow: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+});
+
