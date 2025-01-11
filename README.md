@@ -1,75 +1,146 @@
-# React Native Expo App
+# React Native Expo Architecture Template
 
-A modern mobile application built with React Native and Expo.
+A modern, feature-rich mobile application template built with React Native and Expo. This template provides a robust foundation for building scalable mobile applications with built-in internationalization, theming, navigation, and reusable components.
 
-## Project Structure
+## 🌟 Key Features
+
+- 📱 File-based routing with Expo Router
+- 🌍 Built-in internationalization (i18n) support (English & Turkish)
+- 🎨 Customizable theming system
+- 📊 Interactive charts and data visualization
+- 🔐 Authentication flow
+- 🎯 Type-safe navigation
+- 📝 Form handling
+- 🧩 Reusable UI components
+- 🔄 State management with Redux Toolkit
+- 🎭 Dark/Light mode support
+
+## 📁 Project Structure
 
 ```
-├── app/                   # Main application directory
-│   ├── (tabs)/           # Tab-based navigation screens
-│   ├── components/       # Reusable components
-│   ├── constants/       # App constants and theme
-│   └── utils/           # Utility functions
-├── assets/              # Static assets (images, fonts)
-└── app.json            # Expo configuration
+├── app/ # Main application directory
+│ ├── (drawer)/ # Drawer navigation screens
+│ ├── (tabs)/ # Tab-based navigation screens
+│ ├── components/ # Reusable components
+│ ├── constants/ # App constants and theme
+│ └── utils/ # Utility functions
+├── assets/ # Static assets (images, fonts)
+├── providers/
+├── hooks/ # General Custom Hooks
+├── constants/ # Values used in all app likes styles, typography etc.
+├── api/
+├── screens/
+├── types/
+├── utils/
+├── localization/ # i18n translation files
+└── store/ # Redux store configuration
 ```
 
-## Prerequisites
+## 🚀 Getting Started
+
+### Prerequisites
 
 - Node.js (v16 or newer)
 - npm or yarn
 - Expo CLI
 - iOS Simulator (Mac only) or Android Studio
 
-## Getting Started
+### Installation
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
 
-2. Start the development server:
-   ```bash
-   npx expo start
-   ```
+2. Install dependencies:
+```bash
+npm install
+```
 
-3. Run on your preferred platform:
-   - Press `i` for iOS Simulator
-   - Press `a` for Android Emulator
-   - Scan QR code with Expo Go app (iOS/Android) for physical devices
+3. Start the development server:
+```bash
+npx expo start
+```
 
-## Development Options
+### Running the App
 
-- 📱 **Physical Device**: Use [Expo Go](https://expo.dev/go)
-- 🤖 **Android**: [Set up Android Studio emulator](https://docs.expo.dev/workflow/android-studio-emulator)
-- 🍎 **iOS**: [Set up iOS Simulator](https://docs.expo.dev/workflow/ios-simulator)
-- 🛠️ **Development Build**: Create a [custom development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- iOS Simulator: Press `i`
+- Android Emulator: Press `a`
+- Physical Device: Scan QR code with Expo Go app
 
-## Key Features
+## 🎨 Components
 
-- File-based routing with Expo Router
-- Type-safe navigation
-- Built-in ESLint configuration
-- Fast refresh during development
-- Access to Expo's ecosystem
+The template includes several pre-built components:
 
-## Available Scripts
+- `AgHeader`: Customizable header component
+- `AgBadge`: Badge component for status indicators
+- `AgProgressCircular`: Circular progress indicator
+- `AgLineChart`: Line chart visualization
+- `AgBarChart`: Bar chart visualization
+- `Post`: Social media post component
+- `LoginForm`: Authentication form component
 
-- `npx expo start` - Start the development server
-- `npm run ios` - Run on iOS simulator
-- `npm run android` - Run on Android emulator
-- `npm run web` - Run in web browser
-- `npm run lint` - Run ESLint
-- `npm run reset-project` - Reset to a clean project state
+## 🌍 Internationalization
 
-## Learn More
+The template supports multiple languages using i18next:
+
+```typescript
+import { useTranslation } from "react-i18next";
+
+const { t } = useTranslation();
+t("welcome"); // Translates to current language
+```
+
+## 🎯 State Management
+
+Redux Toolkit is integrated for state management:
+
+- Authentication state
+- Language preferences
+- Loading states
+- Theme preferences
+
+## 📱 Navigation
+
+The app uses Expo Router for file-based navigation:
+
+- Drawer navigation for main menu
+- Stack navigation for authentication flow
+- Tab navigation for main app sections
+
+## 🔧 Development Tools
+
+- TypeScript for type safety
+- ESLint for code quality
+- Jest for testing
+- React Native Reanimated for animations
+
+## 📦 Available Scripts
+
+- `npx expo start`: Start development server
+- `npm run ios`: Run on iOS simulator
+- `npm run android`: Run on Android emulator
+- `npm run web`: Run in web browser
+- `npm run lint`: Run ESLint
+- `npm run test`: Run tests
+- `npm run reset-project`: Reset to clean project state
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Expo team for the amazing framework
+- React Native community
+- Contributors and maintainers
+
+## 📫 Support
 
 - [Expo Documentation](https://docs.expo.dev)
 - [React Native Documentation](https://reactnative.dev)
-- [Expo Router Documentation](https://docs.expo.dev/router/introduction)
-
-## Support
-
-- [Expo GitHub](https://github.com/expo/expo)
-- [Expo Discord](https://chat.expo.dev)
-- [React Native Community](https://reactnative.dev/help)
+- [Project Issues](https://github.com/yourusername/project/issues)
