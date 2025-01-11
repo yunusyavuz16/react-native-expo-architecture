@@ -1,7 +1,6 @@
-import { View, Text } from 'react-native'
-import React from 'react'
 import Setting from '@/app/setting'
 import ScreenLayout from '@/components/screen-layout'
+import React from 'react'
 
 const settings = () => {
   return (
