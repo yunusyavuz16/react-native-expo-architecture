@@ -63,7 +63,7 @@ A modern, feature-rich mobile application template built with React Native and E
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/yunusyavuz16/react-native-expo-architecture
 ```
 
 2. Install dependencies:
