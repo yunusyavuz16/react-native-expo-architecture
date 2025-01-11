@@ -2,16 +2,15 @@
 
 A modern, feature-rich mobile application template built with React Native and Expo. This template provides a robust foundation for building scalable mobile applications with built-in internationalization, theming, navigation, and reusable components.
 
-## 🌟 Screenshots
+## 🌟 Screenshots (Auth, Dark Mode, Multi-language and Dashboard)
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
 
 <img src="screenshots/login.png" width="200" alt="Login Screen">
 
-<img src="screenshots/settings.png" width="200" alt="Settings Screen Light">
 <img src="screenshots/dark-mode.png" width="200" alt="Settings Screen Dark">
 
-<img src="screenshots/settings-turkish.png" width="200" alt="Turkish Language Support">
+<img src="screenshots/localization.png" width="200" alt="Turkish Language Support">
 
 <img src="screenshots/dashboard.png" width="200" alt="Dashboard with Analytics">
 
