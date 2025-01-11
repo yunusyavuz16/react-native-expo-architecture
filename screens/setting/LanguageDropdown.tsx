@@ -1,17 +1,10 @@
 import AgDropdown from "@/components/common/AgDropdown";
 import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
 import { LANGUAGES } from "@/constants/Languages";
 import {
-  alignItemsStyle,
-  borderRadiusStyle,
-  flexDirectionStyle,
   flexStyle,
-  gapStyle,
-  justifyContentStyle,
   marginLeftStyle,
-  paddingStyle,
-  textFontWeightStyle,
+  textFontWeightStyle
 } from "@/constants/Styles";
 import { useAllColors } from "@/hooks/theme/useAllColors";
 import { useAppSelector } from "@/hooks/useAppSelector";
@@ -22,7 +15,6 @@ import { useTranslation } from "react-i18next";
 import { View } from "react-native";
 import { useDispatch } from "react-redux";
 import SettingRow from "./SettingRow";
-import { styles } from "@/components/screen-layout/index.styles";
 
 export default function LanguageDropdown() {
   const dispatch = useDispatch();

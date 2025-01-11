@@ -14,9 +14,11 @@ import {
 import useStyles from "@/hooks/theme/useStyles";
 import { MaterialIcons } from "@expo/vector-icons"; // For edit icon
 import { Pressable, View } from "react-native";
+import { useTranslation } from "react-i18next";
 
 const ExternalLinksWidget = () => {
   const { agTextPrimaryStyle, agBorderGray300Style } = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Card containerStyle={[marginTopStyle.marginTopLg]}>
@@ -27,7 +29,7 @@ const ExternalLinksWidget = () => {
             textFontWeightStyle.textFontWeightBold,
           ]}
         >
-          External Links
+          {t("externalLinks")}
         </ThemedText>
       </View>
 
@@ -45,7 +47,7 @@ const ExternalLinksWidget = () => {
         <ThemedText
           style={[textFontSizeStyle.textFontSizeMd, agTextPrimaryStyle]}
         >
-          {"Avg. Client Rating"}
+          {t("avgClientRating")}
         </ThemedText>
         <Pressable>
           <MaterialIcons name="link" size={18} color="#B0B0B0" />
@@ -65,7 +67,7 @@ const ExternalLinksWidget = () => {
         <ThemedText
           style={[textFontSizeStyle.textFontSizeMd, agTextPrimaryStyle]}
         >
-          {"Instagram Followers"}
+          {t("instagramFollowers")}
         </ThemedText>
         <Pressable>
           <MaterialIcons name="link" size={18} color="#B0B0B0" />
@@ -82,7 +84,7 @@ const ExternalLinksWidget = () => {
         <ThemedText
           style={[textFontSizeStyle.textFontSizeMd, agTextPrimaryStyle]}
         >
-          {"Google Ads CPC"}
+          {t("googleAdsCPC")}
         </ThemedText>
         <Pressable>
           <MaterialIcons name="link" size={18} color="#B0B0B0" />

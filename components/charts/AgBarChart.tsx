@@ -1,8 +1,6 @@
 import { marginTopStyle } from "@/constants/Styles";
-import { Card } from "../card";
-import { ThemedText } from "../ThemedText";
-import { BarChart } from "react-native-gifted-charts";
 import useStyles from "@/hooks/theme/useStyles";
+import { BarChart } from "react-native-gifted-charts";
 import { ThemedView } from "../ThemedView";
 
 const AgBarChart = () => {

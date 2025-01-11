@@ -10,7 +10,7 @@ const useAuth = (username: string) => {
   const handleLogin = async () => {
     const { accessToken, refreshToken } = await loginApi(username);
     dispatch(login({ user: username, refreshToken, accessToken }));
-    router.push("/(tabs)");
+    router.push("/(drawer)/(social)");
   };
 
   const handleLogout = () => {

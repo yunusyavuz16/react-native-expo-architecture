@@ -4,22 +4,23 @@ import {
   gapStyle,
   justifyContentStyle,
   paddingStyle,
-  textFontSizeStyle,
-  textFontWeightStyle,
+  textFontSizeStyle
 } from "@/constants/Styles";
+import useStyles from "@/hooks/theme/useStyles";
+import { useThemeColor } from "@/hooks/theme/useThemeColor";
 import { MaterialIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { LayoutAnimation, Text, TouchableOpacity, View } from "react-native";
+import { LayoutAnimation, TouchableOpacity, View } from "react-native";
 import Collapsible from "react-native-collapsible";
 import { ThemedText } from "./ThemedText";
 import { ThemedView } from "./ThemedView";
-import { useThemeColor } from "@/hooks/theme/useThemeColor";
-import useStyles from "@/hooks/theme/useStyles";
+import { useTranslation } from "react-i18next";
 
 const AgAccordion: React.FC<{}> = () => {
   const agGray600 = useThemeColor("agGray600");
   const { agGray900Color } = useStyles();
   const [collapsed, setCollapsed] = useState(true);
+  const { t } = useTranslation();
 
   const toggleCollapse = () => {
     // make component animated
@@ -42,7 +43,7 @@ const AgAccordion: React.FC<{}> = () => {
           <ThemedText
             style={[textFontSizeStyle.textFontSizeLg, agGray900Color]}
           >
-            Dashboards
+            {t("dashboard")}
           </ThemedText>
         </View>
         <MaterialIcons
@@ -56,7 +57,7 @@ const AgAccordion: React.FC<{}> = () => {
         <TouchableOpacity onPress={() => {}}>
           {/* put point dot to start of text */}
           <ThemedText style={[textFontSizeStyle.textFontSizeMd]}>
-            • Default
+            • {t("default")}
           </ThemedText>
         </TouchableOpacity>
       </Collapsible>

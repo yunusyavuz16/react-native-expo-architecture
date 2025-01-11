@@ -16,9 +16,12 @@ import {
 } from "@/constants/Styles";
 import useStyles from "@/hooks/theme/useStyles";
 import { View } from "react-native";
+import { useTranslation } from "react-i18next";
 
 export default function LoginScreen() {
   const { agGray700Color, agPrimaryColor, agBorderGray300Style } = useStyles();
+  const { t } = useTranslation();
+
   return (
     <ScreenLayout>
       <View
@@ -46,24 +49,24 @@ export default function LoginScreen() {
             ]}
           >
             <View style={[marginStyle.marginMd]}>
-              <ThemedText type="title">Sign In</ThemedText>
+              <ThemedText type="title">{t("login")}</ThemedText>
             </View>
             <View>
               <ThemedText
                 style={[agGray700Color, textFontSizeStyle.textFontSizeMd]}
               >
-                Need an account?{" "}
-                <ThemedText style={agPrimaryColor}>Sign up</ThemedText>
+                {t("needAccount")}{" "}
+                <ThemedText style={agPrimaryColor}>{t("register")}</ThemedText>
               </ThemedText>
             </View>
           </View>
           <View style={[flexDirectionStyle.flexDirectionRow, gapStyle.gapMd]}>
-            <EasyLogin buttonText="Use Login" logo="apple" />
-            <EasyLogin buttonText="Use Apple" logo="google" />
+            <EasyLogin buttonText={t("useLogin")} logo="apple" />
+            <EasyLogin buttonText={t("useApple")} logo="google" />
           </View>
           <View>
             <ThemedText style={agGray700Color} type="sm">
-              OR
+              {t("or")}
             </ThemedText>
           </View>
           <LoginForm />

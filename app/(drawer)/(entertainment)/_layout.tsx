@@ -3,10 +3,10 @@
 import { Tabs } from "expo-router";
 import React from "react";
 
-import { IconSymbol } from "@/components/ui/IconSymbol";
+import { IconSymbol, IconSymbolIonicons } from "@/components/ui/IconSymbol";
 import { useAllColors } from "@/hooks/theme/useAllColors";
-import { useTranslation } from "react-i18next";
 import DashboardHeader from "@/screens/dashboard/DashboardHeader";
+import { useTranslation } from "react-i18next";
 
 export default function TabLayout() {
   const { tint, background } = useAllColors();
@@ -33,6 +33,17 @@ export default function TabLayout() {
           title: t("home"),
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
+          ),
+        }}
+      />
+      {/* setting */}
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: t("settings"),
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="gear" color={color} />
           ),
         }}
       />

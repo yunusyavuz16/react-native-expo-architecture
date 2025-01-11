@@ -1,4 +1,5 @@
 import { Link, Stack } from "expo-router";
+import { useTranslation } from "react-i18next";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
@@ -13,9 +14,11 @@ import {
 import { View } from "react-native";
 
 export default function NotFoundScreen() {
+  const { t } = useTranslation();
+
   return (
     <View style={flexStyle.flex1}>
-      <Stack.Screen options={{ title: "Oops!" }} />
+      <Stack.Screen options={{ title: t("title") }} />
       <ThemedView
         style={[
           flexStyle.flex1,
@@ -24,7 +27,7 @@ export default function NotFoundScreen() {
           paddingStyle.paddingMd,
         ]}
       >
-        <ThemedText type="title">This screen doesn't exist.</ThemedText>
+        <ThemedText type="title">{t("notFoundMessage")}</ThemedText>
         <Link
           href="/"
           style={[
@@ -32,7 +35,7 @@ export default function NotFoundScreen() {
             paddingVerticalStyle.paddingVerticalMd,
           ]}
         >
-          <ThemedText type="link">Go to home screen!</ThemedText>
+          <ThemedText type="link">{t("goHome")}</ThemedText>
         </Link>
       </ThemedView>
     </View>

@@ -16,10 +16,12 @@ import AgCheckBox from "../common/AgCheckbox";
 import AgInput from "../common/AgInput";
 import AgButton from "../common/AgButton";
 import useAuth from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
 
 const initialEmail = "admin@email.com";
 const LoginForm = () => {
   const { agPrimaryColor } = useStyles();
+  const { t } = useTranslation();
   const [email, setEmail] = useState(initialEmail);
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
@@ -35,10 +37,10 @@ const LoginForm = () => {
       {/* Email */}
       <View style={[marginBottomStyle.marginBottomMd]}>
         <ThemedText style={[marginBottomStyle.marginBottomSm]}>
-          Email
+          {t("email")}
         </ThemedText>
         <AgInput
-          placeholder="email@email.com"
+          placeholder={t("emailPlaceholder")}
           placeholderTextColor="#A0A0A0"
           value={email}
           onChangeText={setEmail}
@@ -55,9 +57,9 @@ const LoginForm = () => {
           alignItemsStyle.alignItemsEnd,
         ]}
       >
-        <ThemedText>Password</ThemedText>
+        <ThemedText>{t("password")}</ThemedText>
         <TouchableOpacity>
-          <Text style={[agPrimaryColor]}>Forgot Password?</Text>
+          <Text style={[agPrimaryColor]}>{t("forgotPassword")}</Text>
         </TouchableOpacity>
       </View>
       <View
@@ -68,7 +70,7 @@ const LoginForm = () => {
         ]}
       >
         <AgInput
-          placeholder="Enter Password"
+          placeholder={t("enterPassword")}
           placeholderTextColor="#A0A0A0"
           secureTextEntry={!isPasswordVisible}
           value={password}
@@ -102,12 +104,12 @@ const LoginForm = () => {
             textFontSizeStyle.textFontSizeXmd,
           ]}
         >
-          Remember me
+          {t("rememberMe")}
         </ThemedText>
       </View>
 
       {/* Sign In Button */}
-      <AgButton onPress={handleLogin} text="Sign In" type="primary" />
+      <AgButton onPress={handleLogin} text={t("signIn")} type="primary" />
     </View>
   );
 };

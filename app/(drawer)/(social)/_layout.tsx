@@ -5,8 +5,8 @@ import React from "react";
 
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { useAllColors } from "@/hooks/theme/useAllColors";
-import { useTranslation } from "react-i18next";
 import DashboardHeader from "@/screens/dashboard/DashboardHeader";
+import { useTranslation } from "react-i18next";
 
 export default function TabLayout() {
   const { tint, background } = useAllColors();
@@ -43,6 +43,16 @@ export default function TabLayout() {
           title: t("search"),
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="magnifyingglass" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="notifications"
+        options={{
+          headerShown: false,
+          title: t("notifications"),
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="bell" color={color} />
           ),
         }}
       />

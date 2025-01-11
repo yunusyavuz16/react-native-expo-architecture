@@ -3,6 +3,7 @@ import {
   flexDirectionStyle,
   flexStyle,
   gapStyle,
+  heightStyle,
   justifyContentStyle,
   marginTopStyle,
   paddingHorizontalStyle,
@@ -16,17 +17,13 @@ import { useThemeColor } from "@/hooks/theme/useThemeColor";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Href, useRouter } from "expo-router";
 import React, { ComponentProps, useState } from "react";
-import {
-  LayoutAnimation,
-  ScrollView,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { LayoutAnimation, TouchableOpacity, View } from "react-native";
 import Collapsible from "react-native-collapsible";
 import Divider from "./Divider";
 import ScreenLayout from "./screen-layout";
 import { ThemedText } from "./ThemedText";
 import { ThemedView } from "./ThemedView";
+import LogoRowName from "./LogoRowName";
 
 interface SidbarDataItem {
   label: string;
@@ -47,38 +44,18 @@ const sidebarData: SidbarDataItem[] = [
 ];
 
 const DrawerContent = () => {
-  const agGray600 = useThemeColor("agPrimary");
   return (
-    <ScrollView style={[flexStyle.flex1, { maxHeight: "100%" }]}>
-      <ScreenLayout style={[flexStyle.flex1, paddingStyle.paddingLg]}>
-        {/* App Logo */}
-        <View
-          style={[
-            flexDirectionStyle.flexDirectionRow,
-            paddingVerticalStyle.paddingVerticalMd,
-            alignItemsStyle.alignItemsCenter,
-          ]}
-        >
-          <MaterialIcons color={agGray600} name="dashboard" size={48} />
-          <View style={paddingStyle.paddingMd}>
-            <ThemedText
-              style={[
-                textFontSizeStyle.textFontSizeXl,
-                textFontWeightStyle.textFontWeightBold,
-              ]}
-            >
-              AppFormit
-            </ThemedText>
-          </View>
-        </View>
-        <Divider />
-        <View style={[paddingVerticalStyle.paddingVerticalMd, flexStyle.flex1]}>
-          {sidebarData.map((item, index) => (
-            <SidebarItem key={index} item={item} icon={item.icon} />
-          ))}
-        </View>
-      </ScreenLayout>
-    </ScrollView>
+    <ScreenLayout
+      style={[flexStyle.flex1, paddingStyle.paddingLg, heightStyle.height100]}
+    >
+      <LogoRowName />
+      <Divider />
+      <View style={[paddingVerticalStyle.paddingVerticalMd, flexStyle.flex1]}>
+        {sidebarData.map((item, index) => (
+          <SidebarItem key={index} item={item} icon={item.icon} />
+        ))}
+      </View>
+    </ScreenLayout>
   );
 };
 
