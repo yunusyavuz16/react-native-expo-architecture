@@ -6,17 +6,13 @@ A modern, feature-rich mobile application template built with React Native and E
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
 
-### Authentication
 <img src="screenshots/login.png" width="200" alt="Login Screen">
 
-### Settings & Theme
 <img src="screenshots/settings.png" width="200" alt="Settings Screen Light">
 <img src="screenshots/dark-mode.png" width="200" alt="Settings Screen Dark">
 
-### Multi-language Support
 <img src="screenshots/settings-turkish.png" width="200" alt="Turkish Language Support">
 
-### Dashboard
 <img src="screenshots/dashboard.png" width="200" alt="Dashboard with Analytics">
 
 </div>
