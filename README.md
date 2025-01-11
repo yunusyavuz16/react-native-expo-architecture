@@ -8,11 +8,11 @@ A modern, feature-rich mobile application template built with React Native and E
 
 <img src="screenshots/login.png" width="200" alt="Login Screen">
 
+<img src="screenshots/dashboard.png" width="200" alt="Dashboard with Analytics">
+
 <img src="screenshots/dark-mode.png" width="200" alt="Settings Screen Dark">
 
 <img src="screenshots/localization.png" width="200" alt="Turkish Language Support">
-
-<img src="screenshots/dashboard.png" width="200" alt="Dashboard with Analytics">
 
 </div>
 
