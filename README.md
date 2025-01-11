@@ -2,6 +2,25 @@
 
 A modern, feature-rich mobile application template built with React Native and Expo. This template provides a robust foundation for building scalable mobile applications with built-in internationalization, theming, navigation, and reusable components.
 
+## 🌟 Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+
+### Authentication
+<img src="screenshots/login.png" width="200" alt="Login Screen">
+
+### Settings & Theme
+<img src="screenshots/settings-light.png" width="200" alt="Settings Screen Light">
+<img src="screenshots/settings-dark.png" width="200" alt="Settings Screen Dark">
+
+### Multi-language Support
+<img src="screenshots/settings-turkish.png" width="200" alt="Turkish Language Support">
+
+### Dashboard
+<img src="screenshots/dashboard.png" width="200" alt="Dashboard with Analytics">
+
+</div>
+
 ## 🌟 Key Features
 
 - 📱 File-based routing with Expo Router
@@ -127,7 +146,7 @@ The app uses Expo Router for file-based navigation:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+Contributions are welcome!
 
 ## 📄 License
 
@@ -143,4 +162,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [Expo Documentation](https://docs.expo.dev)
 - [React Native Documentation](https://reactnative.dev)
-- [Project Issues](https://github.com/yourusername/project/issues)
+- [Project Issues](https://github.com/yunusyavuz16/react-native-expo-architecture/issues)

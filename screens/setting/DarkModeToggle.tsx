@@ -6,9 +6,11 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import React, { memo } from "react";
 import { StyleSheet, Switch } from "react-native";
 import SettingRow from "./SettingRow";
+import { useTranslation } from "react-i18next";
 
 const DarkModeToggle = () => {
   const { toggleTheme, theme } = useTheme();
+  const { t } = useTranslation();
   const { agGray300, agPrimary, text } = useAllColors();
   const toggleSwitch = () => {
     toggleTheme();
@@ -19,7 +21,7 @@ const DarkModeToggle = () => {
     <SettingRow>
       <Ionicons name="moon-outline" size={24} color={text} />
 
-      <ThemedText style={styles.text}>Dark Mode</ThemedText>
+      <ThemedText style={styles.text}>{t("darkMode")}</ThemedText>
       <Switch
         trackColor={{ false: agGray300, true: agPrimary }}
         thumbColor={isEnabled ? "#FFFFFF" : "#F4F3F4"}
