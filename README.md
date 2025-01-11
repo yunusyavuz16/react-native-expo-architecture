@@ -10,8 +10,8 @@ A modern, feature-rich mobile application template built with React Native and E
 <img src="screenshots/login.png" width="200" alt="Login Screen">
 
 ### Settings & Theme
-<img src="screenshots/settings-light.png" width="200" alt="Settings Screen Light">
-<img src="screenshots/settings-dark.png" width="200" alt="Settings Screen Dark">
+<img src="screenshots/settings.png" width="200" alt="Settings Screen Light">
+<img src="screenshots/dark-mode.png" width="200" alt="Settings Screen Dark">
 
 ### Multi-language Support
 <img src="screenshots/settings-turkish.png" width="200" alt="Turkish Language Support">
