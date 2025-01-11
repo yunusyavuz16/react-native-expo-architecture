@@ -39,13 +39,13 @@ A modern, feature-rich mobile application template built with React Native and E
 │ ├── constants/ # App constants and theme
 │ └── utils/ # Utility functions
 ├── assets/ # Static assets (images, fonts)
-├── providers/
+├── providers/ # Context providers and dependency injection containers
 ├── hooks/ # General Custom Hooks
 ├── constants/ # Values used in all app likes styles, typography etc.
-├── api/
-├── screens/
-├── types/
-├── utils/
+├── api/ # API services, endpoints, and network related utilities
+├── screens/ # Screen components and their specific logic
+├── types/ # TypeScript interfaces, types and type definitions
+├── utils/ # Helper functions, formatters, and utility methods
 ├── localization/ # i18n translation files
 └── store/ # Redux store configuration
 ```
